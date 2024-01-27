@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ObiektGeom.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObiektGeom.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObiektGeom.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/PowierzchniaMarsa.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/src/PowierzchniaMarsa.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/lacze_do_gnuplota.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/src/lacze_do_gnuplota.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Lazik.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Lazik.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Lazik.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Scena.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Scena.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Scena.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ObrysXY.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObrysXY.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObrysXY.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ProbkaRegolitu.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ProbkaRegolitu.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/LazikSFR.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/LazikSFR.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/src/LazikSFR.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/inc -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-src -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/main.dir/app/main.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/app/main.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/app/main.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/tests",
+  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I/home/szylux/Desktop/lol/kpo-zad-6-2-main/build -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/main.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/tests/main.cpp",
+  "file": "/home/szylux/Desktop/lol/kpo-zad-6-2-main/tests/main.cpp"
+}
+]
