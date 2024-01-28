@@ -1,4 +1,4 @@
-# Install script for directory: /home/szylux/Desktop/lol/kpo-zad-6-2-main/tests
+# Install script for directory: /home/szylux/Desktop/Rover/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

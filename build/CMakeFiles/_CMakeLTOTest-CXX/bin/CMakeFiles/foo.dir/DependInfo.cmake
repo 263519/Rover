@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp" "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/foo.cpp.o"
+  "/home/szylux/Desktop/Rover/build/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/foo.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

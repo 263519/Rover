@@ -1,5 +1,5 @@
 CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o: \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/PowierzchniaMarsa.cpp \
+ /home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/fstream \
  /usr/include/c++/11/istream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd \
@@ -150,8 +150,8 @@ CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/iostream \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/PowierzchniaMarsa.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/lacze_do_gnuplota.hh \
+ /home/szylux/Desktop/Rover/inc/PowierzchniaMarsa.hh \
+ /home/szylux/Desktop/Rover/inc/lacze_do_gnuplota.hh \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/allocated_ptr.h \
  /usr/include/c++/11/ext/aligned_buffer.h \

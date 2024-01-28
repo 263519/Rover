@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/szylux/Desktop/lol/kpo-zad-6-2-main
-BuildDirectory: /home/szylux/Desktop/lol/kpo-zad-6-2-main/build
+SourceDirectory: /home/szylux/Desktop/Rover
+BuildDirectory: /home/szylux/Desktop/Rover/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/szylux/Desktop/lol/kpo-zad-6-2-main"
+ConfigureCommand: "/usr/bin/cmake" "/home/szylux/Desktop/Rover"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
@@ -44,7 +44,7 @@ SVNOptions:
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: 
+GITCommand: /usr/bin/git
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -57,9 +57,9 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: 
+UpdateCommand: /usr/bin/git
 UpdateOptions: 
-UpdateType: 
+UpdateType: git
 
 # Compiler info
 Compiler: /usr/bin/c++

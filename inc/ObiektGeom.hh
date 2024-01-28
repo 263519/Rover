@@ -55,7 +55,11 @@ class ObiektGeom {
 
     //deklaracja konstruktora
     ObiektGeom(const char* sNazwaPliku_BrylaWzorcowa, const char* sNazwaObiektu, int KolorID,Vector3D Skala, Vector3D Polozenie, double stopnie);
-    virtual ~ObiektGeom();
+    virtual ~ObiektGeom(){
+    
+    std::cout<<"ObiektGeom Destructor is running\n";
+    
+    }
 
 
 

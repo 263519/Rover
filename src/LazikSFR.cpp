@@ -79,12 +79,12 @@ TypKolizji LazikSFR::Czy_Zderzenie(shared_ptr<Lazik> &Akt) {
 
 }
 
+
+// copying beacuse i have to chage name of probka for pobrana ezez
 void LazikSFR::Dodaj_Probke(shared_ptr<ObiektGeom> &wsk_probka) {
 
   ListaObiektowNaLaziku.push_back(wsk_probka);
-  double wywalonko[3] = {0, 0, 0};
-  Vector3D Wywalonko(wywalonko);
-  wsk_probka->set_Skala() = Wywalonko;
+ 
 }
 
 void LazikSFR::Wyswietl_Liste() {

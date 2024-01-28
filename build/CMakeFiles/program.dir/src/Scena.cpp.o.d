@@ -1,8 +1,6 @@
 CMakeFiles/program.dir/src/Scena.cpp.o: \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Scena.cpp \
- /usr/include/stdc-predef.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/Scena.hh \
- /usr/include/c++/11/iostream \
+ /home/szylux/Desktop/Rover/src/Scena.cpp /usr/include/stdc-predef.h \
+ /home/szylux/Desktop/Rover/inc/Scena.hh /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -148,9 +146,9 @@ CMakeFiles/program.dir/src/Scena.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/Lazik.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/ObiektGeom.hh \
- /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
+ /home/szylux/Desktop/Rover/inc/Lazik.hh \
+ /home/szylux/Desktop/Rover/inc/ObiektGeom.hh /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -170,10 +168,9 @@ CMakeFiles/program.dir/src/Scena.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/SVector.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/SMatrix.hh \
- /usr/include/c++/11/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /home/szylux/Desktop/Rover/inc/SVector.hh \
+ /home/szylux/Desktop/Rover/inc/SMatrix.hh /usr/include/c++/11/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -195,9 +192,9 @@ CMakeFiles/program.dir/src/Scena.cpp.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/ObrysXY.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/TypKolizji.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/lacze_do_gnuplota.hh \
+ /home/szylux/Desktop/Rover/inc/ObrysXY.hh \
+ /home/szylux/Desktop/Rover/inc/TypKolizji.hh \
+ /home/szylux/Desktop/Rover/inc/lacze_do_gnuplota.hh \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_vector.h \
@@ -210,8 +207,8 @@ CMakeFiles/program.dir/src/Scena.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/Kolory.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/PowierzchniaMarsa.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/ProbkaRegolitu.hh \
+ /home/szylux/Desktop/Rover/inc/Kolory.hh \
+ /home/szylux/Desktop/Rover/inc/PowierzchniaMarsa.hh \
+ /home/szylux/Desktop/Rover/inc/ProbkaRegolitu.hh \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/LazikSFR.hh
+ /home/szylux/Desktop/Rover/inc/LazikSFR.hh

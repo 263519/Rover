@@ -43,8 +43,8 @@ Scena::Scena() {
   double polozenie1[3] = {0, 0, 0};
   double polozenie2[3] = {-40, -10, 0};
   double polozenie3[3] = {30, 0, 0};
-  double polozenie4[3] = {77, 34, 0};
-  double polozenie5[3] = {-60, -60, 0};
+  double polozenie4[3] = {70, 0, 0};
+  double polozenie5[3] = {80, 0, 0};
 
   Vector3D Polozenie1(polozenie1);
   Vector3D Polozenie2(polozenie2);
@@ -71,7 +71,7 @@ Scena::Scena() {
                                   Kolor_Czerwony, Skala * 0.2, Polozenie5, 0));
     ObiektLista.push_back(
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Louda",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie5*(-1), 0));
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie3*(2), 0));
 
   for (shared_ptr<ObiektGeom> &Ob : ObiektLista) {
     DodajDoListyRysowania(Lacze, *Ob);
@@ -212,23 +212,27 @@ void Scena::WyswietlListeProbek() {
 
 void Scena::PodniesProbke() {
 
-  list<shared_ptr<ObiektGeom>> lista_tmp = ObiektLista;
+  //list<shared_ptr<ObiektGeom>> lista_tmp = ObiektLista;
   double wysoko[3] = {999, 999, 999};
   Vector3D Wysoko(wysoko);
+
+
 
   if (WybranyLazik->get_NazwaObiektu() != "FSR")
     cout << "Opcja dostępna tylko dla Lazika SFR! " << endl;
 
   else {
-    for (shared_ptr<ObiektGeom> &Ob : lista_tmp) {
+    
+    for (shared_ptr<ObiektGeom> &Ob : ObiektLista) {
       list<shared_ptr<ObiektGeom>>::iterator it = ObiektLista.begin();
-      ++it;
+    
+    
 
       if (WybranyLazik->WezNazweObiektu() != Ob->WezNazweObiektu()) {
-
+  cout<<"Typ kolizji"<<Ob->Czy_Zderzenie(WybranyLazik)<<"\n";
         if (Ob->Czy_Zderzenie(WybranyLazik)) {
 
-          if (Ob->Czy_Zderzenie(WybranyLazik) == PrzejazdNadProbka) {
+          if (Ob->Czy_Zderzenie(WybranyLazik) == PrzejazdNadProbka || Ob->Czy_Zderzenie(WybranyLazik) == KolizjaZProbka) {
 
             shared_ptr<LazikSFR> lazikSFR;
             lazikSFR = dynamic_pointer_cast<LazikSFR>(WybranyLazik);
@@ -236,20 +240,23 @@ void Scena::PodniesProbke() {
             Ob->set_Polozenie() = Wysoko;
             Ob->Przelicz_i_Zapisz_Wierzcholki();
             Ob->set_NazwaObiektu() = "pobrana";
+            
             Lacze.Rysuj();
             ObiektLista.erase(it);
             UsunDoListyRysowania(Lacze, *Ob);
 
-            lista_tmp = ObiektLista;
+            //lista_tmp = ObiektLista;
           }
 
-          cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie."
-               << endl;
-          cin.ignore(100, '\n');
-        }
+          // cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie."
+          //      << endl;
+          // cin.ignore(100, '\n');
+        //}
       }
+        ++it;
     }
-  }
+    }
+}
 }
 
 void Scena::Menu() {

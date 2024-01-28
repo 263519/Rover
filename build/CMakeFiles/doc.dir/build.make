@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szylux/Desktop/lol/kpo-zad-6-2-main
+CMAKE_SOURCE_DIR = /home/szylux/Desktop/Rover
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szylux/Desktop/lol/kpo-zad-6-2-main/build
+CMAKE_BINARY_DIR = /home/szylux/Desktop/Rover/build
 
 # Utility rule file for doc.
 
@@ -67,8 +67,8 @@ include CMakeFiles/doc.dir/compiler_depend.make
 include CMakeFiles/doc.dir/progress.make
 
 CMakeFiles/doc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[1;35mGenerating API documentation with Doxygen (open ./html/index.html to view)."
-	/usr/bin/doxygen /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/Doxyfile &> doxygen.log
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[1;35mGenerating API documentation with Doxygen (open ./html/index.html to view)."
+	/usr/bin/doxygen /home/szylux/Desktop/Rover/build/Doxyfile &> doxygen.log
 
 doc: CMakeFiles/doc
 doc: CMakeFiles/doc.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/doc.dir/clean:
 .PHONY : CMakeFiles/doc.dir/clean
 
 CMakeFiles/doc.dir/depend:
-	cd /home/szylux/Desktop/lol/kpo-zad-6-2-main/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szylux/Desktop/lol/kpo-zad-6-2-main /home/szylux/Desktop/lol/kpo-zad-6-2-main /home/szylux/Desktop/lol/kpo-zad-6-2-main/build /home/szylux/Desktop/lol/kpo-zad-6-2-main/build /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szylux/Desktop/Rover/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szylux/Desktop/Rover /home/szylux/Desktop/Rover /home/szylux/Desktop/Rover/build /home/szylux/Desktop/Rover/build /home/szylux/Desktop/Rover/build/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doc.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szylux/Desktop/lol/kpo-zad-6-2-main
+CMAKE_SOURCE_DIR = /home/szylux/Desktop/Rover
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szylux/Desktop/lol/kpo-zad-6-2-main/build
+CMAKE_BINARY_DIR = /home/szylux/Desktop/Rover/build
 
 # Utility rule file for fulltest.
 
@@ -67,7 +67,7 @@ include tests/CMakeFiles/fulltest.dir/compiler_depend.make
 include tests/CMakeFiles/fulltest.dir/progress.make
 
 tests/CMakeFiles/fulltest:
-	cd /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/tests && /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/unit_tests -s
+	cd /home/szylux/Desktop/Rover/build/tests && /home/szylux/Desktop/Rover/build/unit_tests -s
 
 fulltest: tests/CMakeFiles/fulltest
 fulltest: tests/CMakeFiles/fulltest.dir/build.make
@@ -78,10 +78,10 @@ tests/CMakeFiles/fulltest.dir/build: fulltest
 .PHONY : tests/CMakeFiles/fulltest.dir/build
 
 tests/CMakeFiles/fulltest.dir/clean:
-	cd /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/fulltest.dir/cmake_clean.cmake
+	cd /home/szylux/Desktop/Rover/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/fulltest.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/fulltest.dir/clean
 
 tests/CMakeFiles/fulltest.dir/depend:
-	cd /home/szylux/Desktop/lol/kpo-zad-6-2-main/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szylux/Desktop/lol/kpo-zad-6-2-main /home/szylux/Desktop/lol/kpo-zad-6-2-main/tests /home/szylux/Desktop/lol/kpo-zad-6-2-main/build /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/tests /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/tests/CMakeFiles/fulltest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szylux/Desktop/Rover/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szylux/Desktop/Rover /home/szylux/Desktop/Rover/tests /home/szylux/Desktop/Rover/build /home/szylux/Desktop/Rover/build/tests /home/szylux/Desktop/Rover/build/tests/CMakeFiles/fulltest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/fulltest.dir/depend
 
