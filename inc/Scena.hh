@@ -40,6 +40,9 @@ void WyswietlListeProbek();
 void Menu();
 void PodniesProbke();
 
+~Scena(){
+    std::cout<<"Scena Destructor is running\n";
+}
 
 
 

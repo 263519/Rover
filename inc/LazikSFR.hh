@@ -17,5 +17,16 @@ class LazikSFR : public Lazik{
     void Dodaj_Probke(std::shared_ptr<ObiektGeom> &wsk_probka);
     void Wyswietl_Liste();
 
+    ~LazikSFR(){
+        std::cout<<"LazikSFR destructor is running\n\n\n";
+
+        std::cout<<"Lista obiektow na laziuku:\n";
+        for(auto &x:ListaObiektowNaLaziku){
+            std::cout<<x->get_NazwaObiektu()<<"\n";
+        }
+
+        std::cout<<"\n";
+    }
+
 
 };

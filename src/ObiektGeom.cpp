@@ -5,7 +5,7 @@
 
 using namespace std;
 
-ObiektGeom::~ObiektGeom() { cout << "Destrukto" << endl; }
+
 
 ObiektGeom::ObiektGeom(const char *sNazwaPliku_BrylaWzorcowa,
                        const char *sNazwaObiektu, int KolorID, Vector3D _Skala,

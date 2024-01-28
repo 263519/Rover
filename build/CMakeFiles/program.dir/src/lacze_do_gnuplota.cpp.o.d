@@ -1,5 +1,5 @@
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/lacze_do_gnuplota.cpp \
+ /home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/cstdio \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -201,7 +201,7 @@ CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/lacze_do_gnuplota.hh \
+ /home/szylux/Desktop/Rover/inc/lacze_do_gnuplota.hh \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/allocated_ptr.h \
  /usr/include/c++/11/ext/aligned_buffer.h \

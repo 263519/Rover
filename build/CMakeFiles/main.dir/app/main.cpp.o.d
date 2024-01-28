@@ -1,9 +1,7 @@
 CMakeFiles/main.dir/app/main.cpp.o: \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/app/main.cpp \
- /usr/include/stdc-predef.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/Kolory.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/Lazik.hh \
- /usr/include/c++/11/string \
+ /home/szylux/Desktop/Rover/app/main.cpp /usr/include/stdc-predef.h \
+ /home/szylux/Desktop/Rover/inc/Kolory.hh \
+ /home/szylux/Desktop/Rover/inc/Lazik.hh /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -131,8 +129,8 @@ CMakeFiles/main.dir/app/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/ObiektGeom.hh \
- /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
+ /home/szylux/Desktop/Rover/inc/ObiektGeom.hh /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -155,9 +153,9 @@ CMakeFiles/main.dir/app/main.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/SVector.hh \
- /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
- /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
+ /home/szylux/Desktop/Rover/inc/SVector.hh /usr/include/c++/11/iostream \
+ /usr/include/c++/11/ostream /usr/include/c++/11/ios \
+ /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/system_error \
@@ -174,9 +172,8 @@ CMakeFiles/main.dir/app/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/SMatrix.hh \
- /usr/include/c++/11/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /home/szylux/Desktop/Rover/inc/SMatrix.hh /usr/include/c++/11/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -198,9 +195,9 @@ CMakeFiles/main.dir/app/main.cpp.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/ObrysXY.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/TypKolizji.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/lacze_do_gnuplota.hh \
+ /home/szylux/Desktop/Rover/inc/ObrysXY.hh \
+ /home/szylux/Desktop/Rover/inc/TypKolizji.hh \
+ /home/szylux/Desktop/Rover/inc/lacze_do_gnuplota.hh \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_vector.h \
@@ -213,14 +210,14 @@ CMakeFiles/main.dir/app/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/PowierzchniaMarsa.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/Scena.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/Kolory.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/PowierzchniaMarsa.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/ProbkaRegolitu.hh \
+ /home/szylux/Desktop/Rover/inc/PowierzchniaMarsa.hh \
+ /home/szylux/Desktop/Rover/inc/Scena.hh \
+ /home/szylux/Desktop/Rover/inc/Kolory.hh \
+ /home/szylux/Desktop/Rover/inc/PowierzchniaMarsa.hh \
+ /home/szylux/Desktop/Rover/inc/ProbkaRegolitu.hh \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/LazikSFR.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/lacze_do_gnuplota.hh \
+ /home/szylux/Desktop/Rover/inc/LazikSFR.hh \
+ /home/szylux/Desktop/Rover/inc/lacze_do_gnuplota.hh \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \

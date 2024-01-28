@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szylux/Desktop/lol/kpo-zad-6-2-main
+CMAKE_SOURCE_DIR = /home/szylux/Desktop/Rover
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szylux/Desktop/lol/kpo-zad-6-2-main/build
+CMAKE_BINARY_DIR = /home/szylux/Desktop/Rover/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/app/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp
 CMakeFiles/main.dir/app/main.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/app/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/app/main.cpp.o -MF CMakeFiles/main.dir/app/main.cpp.o.d -o CMakeFiles/main.dir/app/main.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/app/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/app/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/app/main.cpp.o -MF CMakeFiles/main.dir/app/main.cpp.o.d -o CMakeFiles/main.dir/app/main.cpp.o -c /home/szylux/Desktop/Rover/app/main.cpp
 
 CMakeFiles/main.dir/app/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/app/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/app/main.cpp > CMakeFiles/main.dir/app/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/app/main.cpp > CMakeFiles/main.dir/app/main.cpp.i
 
 CMakeFiles/main.dir/app/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/app/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/app/main.cpp -o CMakeFiles/main.dir/app/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/app/main.cpp -o CMakeFiles/main.dir/app/main.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -89,14 +89,14 @@ main_OBJECTS = \
 
 # External object files for target main
 main_EXTERNAL_OBJECTS = \
-"/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/src/ObiektGeom.cpp.o" \
-"/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o" \
-"/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o" \
-"/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/src/Lazik.cpp.o" \
-"/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/src/Scena.cpp.o" \
-"/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/src/ObrysXY.cpp.o" \
-"/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o" \
-"/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/src/LazikSFR.cpp.o"
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/ObiektGeom.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/Lazik.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/Scena.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/ObrysXY.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/LazikSFR.cpp.o"
 
 main: CMakeFiles/main.dir/app/main.cpp.o
 main: CMakeFiles/program.dir/src/ObiektGeom.cpp.o
@@ -109,7 +109,7 @@ main: CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o
 main: CMakeFiles/program.dir/src/LazikSFR.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/szylux/Desktop/lol/kpo-zad-6-2-main/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szylux/Desktop/lol/kpo-zad-6-2-main /home/szylux/Desktop/lol/kpo-zad-6-2-main /home/szylux/Desktop/lol/kpo-zad-6-2-main/build /home/szylux/Desktop/lol/kpo-zad-6-2-main/build /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szylux/Desktop/Rover/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szylux/Desktop/Rover /home/szylux/Desktop/Rover /home/szylux/Desktop/Rover/build /home/szylux/Desktop/Rover/build /home/szylux/Desktop/Rover/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

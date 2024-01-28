@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szylux/Desktop/lol/kpo-zad-6-2-main
+CMAKE_SOURCE_DIR = /home/szylux/Desktop/Rover
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szylux/Desktop/lol/kpo-zad-6-2-main/build
+CMAKE_BINARY_DIR = /home/szylux/Desktop/Rover/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/program.dir/depend.make
@@ -72,114 +72,114 @@ include CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/ObiektGeom.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/ObiektGeom.cpp.o: ../src/ObiektGeom.cpp
 CMakeFiles/program.dir/src/ObiektGeom.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/src/ObiektGeom.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/ObiektGeom.cpp.o -MF CMakeFiles/program.dir/src/ObiektGeom.cpp.o.d -o CMakeFiles/program.dir/src/ObiektGeom.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObiektGeom.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/src/ObiektGeom.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/ObiektGeom.cpp.o -MF CMakeFiles/program.dir/src/ObiektGeom.cpp.o.d -o CMakeFiles/program.dir/src/ObiektGeom.cpp.o -c /home/szylux/Desktop/Rover/src/ObiektGeom.cpp
 
 CMakeFiles/program.dir/src/ObiektGeom.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/ObiektGeom.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObiektGeom.cpp > CMakeFiles/program.dir/src/ObiektGeom.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/src/ObiektGeom.cpp > CMakeFiles/program.dir/src/ObiektGeom.cpp.i
 
 CMakeFiles/program.dir/src/ObiektGeom.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/ObiektGeom.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObiektGeom.cpp -o CMakeFiles/program.dir/src/ObiektGeom.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/src/ObiektGeom.cpp -o CMakeFiles/program.dir/src/ObiektGeom.cpp.s
 
 CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o: ../src/PowierzchniaMarsa.cpp
 CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o -MF CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o.d -o CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/PowierzchniaMarsa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o -MF CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o.d -o CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o -c /home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp
 
 CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/PowierzchniaMarsa.cpp > CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp > CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.i
 
 CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/PowierzchniaMarsa.cpp -o CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp -o CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.s
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../src/lacze_do_gnuplota.cpp
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -MF CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o.d -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/lacze_do_gnuplota.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -MF CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o.d -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/lacze_do_gnuplota.cpp > CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp > CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/lacze_do_gnuplota.cpp -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s
 
 CMakeFiles/program.dir/src/Lazik.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Lazik.cpp.o: ../src/Lazik.cpp
 CMakeFiles/program.dir/src/Lazik.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/Lazik.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Lazik.cpp.o -MF CMakeFiles/program.dir/src/Lazik.cpp.o.d -o CMakeFiles/program.dir/src/Lazik.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Lazik.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/Lazik.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Lazik.cpp.o -MF CMakeFiles/program.dir/src/Lazik.cpp.o.d -o CMakeFiles/program.dir/src/Lazik.cpp.o -c /home/szylux/Desktop/Rover/src/Lazik.cpp
 
 CMakeFiles/program.dir/src/Lazik.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Lazik.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Lazik.cpp > CMakeFiles/program.dir/src/Lazik.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/src/Lazik.cpp > CMakeFiles/program.dir/src/Lazik.cpp.i
 
 CMakeFiles/program.dir/src/Lazik.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Lazik.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Lazik.cpp -o CMakeFiles/program.dir/src/Lazik.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/src/Lazik.cpp -o CMakeFiles/program.dir/src/Lazik.cpp.s
 
 CMakeFiles/program.dir/src/Scena.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Scena.cpp.o: ../src/Scena.cpp
 CMakeFiles/program.dir/src/Scena.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Scena.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Scena.cpp.o -MF CMakeFiles/program.dir/src/Scena.cpp.o.d -o CMakeFiles/program.dir/src/Scena.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Scena.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Scena.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Scena.cpp.o -MF CMakeFiles/program.dir/src/Scena.cpp.o.d -o CMakeFiles/program.dir/src/Scena.cpp.o -c /home/szylux/Desktop/Rover/src/Scena.cpp
 
 CMakeFiles/program.dir/src/Scena.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Scena.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Scena.cpp > CMakeFiles/program.dir/src/Scena.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/src/Scena.cpp > CMakeFiles/program.dir/src/Scena.cpp.i
 
 CMakeFiles/program.dir/src/Scena.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Scena.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/Scena.cpp -o CMakeFiles/program.dir/src/Scena.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/src/Scena.cpp -o CMakeFiles/program.dir/src/Scena.cpp.s
 
 CMakeFiles/program.dir/src/ObrysXY.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/ObrysXY.cpp.o: ../src/ObrysXY.cpp
 CMakeFiles/program.dir/src/ObrysXY.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/ObrysXY.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/ObrysXY.cpp.o -MF CMakeFiles/program.dir/src/ObrysXY.cpp.o.d -o CMakeFiles/program.dir/src/ObrysXY.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObrysXY.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/ObrysXY.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/ObrysXY.cpp.o -MF CMakeFiles/program.dir/src/ObrysXY.cpp.o.d -o CMakeFiles/program.dir/src/ObrysXY.cpp.o -c /home/szylux/Desktop/Rover/src/ObrysXY.cpp
 
 CMakeFiles/program.dir/src/ObrysXY.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/ObrysXY.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObrysXY.cpp > CMakeFiles/program.dir/src/ObrysXY.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/src/ObrysXY.cpp > CMakeFiles/program.dir/src/ObrysXY.cpp.i
 
 CMakeFiles/program.dir/src/ObrysXY.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/ObrysXY.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObrysXY.cpp -o CMakeFiles/program.dir/src/ObrysXY.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/src/ObrysXY.cpp -o CMakeFiles/program.dir/src/ObrysXY.cpp.s
 
 CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o: ../src/ProbkaRegolitu.cpp
 CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o -MF CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o.d -o CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ProbkaRegolitu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o -MF CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o.d -o CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o -c /home/szylux/Desktop/Rover/src/ProbkaRegolitu.cpp
 
 CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ProbkaRegolitu.cpp > CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/src/ProbkaRegolitu.cpp > CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.i
 
 CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ProbkaRegolitu.cpp -o CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/src/ProbkaRegolitu.cpp -o CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.s
 
 CMakeFiles/program.dir/src/LazikSFR.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/LazikSFR.cpp.o: ../src/LazikSFR.cpp
 CMakeFiles/program.dir/src/LazikSFR.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/LazikSFR.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/LazikSFR.cpp.o -MF CMakeFiles/program.dir/src/LazikSFR.cpp.o.d -o CMakeFiles/program.dir/src/LazikSFR.cpp.o -c /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/LazikSFR.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/LazikSFR.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/LazikSFR.cpp.o -MF CMakeFiles/program.dir/src/LazikSFR.cpp.o.d -o CMakeFiles/program.dir/src/LazikSFR.cpp.o -c /home/szylux/Desktop/Rover/src/LazikSFR.cpp
 
 CMakeFiles/program.dir/src/LazikSFR.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/LazikSFR.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/LazikSFR.cpp > CMakeFiles/program.dir/src/LazikSFR.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szylux/Desktop/Rover/src/LazikSFR.cpp > CMakeFiles/program.dir/src/LazikSFR.cpp.i
 
 CMakeFiles/program.dir/src/LazikSFR.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/LazikSFR.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/LazikSFR.cpp -o CMakeFiles/program.dir/src/LazikSFR.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szylux/Desktop/Rover/src/LazikSFR.cpp -o CMakeFiles/program.dir/src/LazikSFR.cpp.s
 
 program: CMakeFiles/program.dir/src/ObiektGeom.cpp.o
 program: CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o
@@ -201,6 +201,6 @@ CMakeFiles/program.dir/clean:
 .PHONY : CMakeFiles/program.dir/clean
 
 CMakeFiles/program.dir/depend:
-	cd /home/szylux/Desktop/lol/kpo-zad-6-2-main/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szylux/Desktop/lol/kpo-zad-6-2-main /home/szylux/Desktop/lol/kpo-zad-6-2-main /home/szylux/Desktop/lol/kpo-zad-6-2-main/build /home/szylux/Desktop/lol/kpo-zad-6-2-main/build /home/szylux/Desktop/lol/kpo-zad-6-2-main/build/CMakeFiles/program.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/szylux/Desktop/Rover/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/szylux/Desktop/Rover /home/szylux/Desktop/Rover /home/szylux/Desktop/Rover/build /home/szylux/Desktop/Rover/build /home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/program.dir/depend
 

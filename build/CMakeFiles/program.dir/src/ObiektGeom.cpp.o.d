@@ -1,8 +1,6 @@
 CMakeFiles/program.dir/src/ObiektGeom.cpp.o: \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/src/ObiektGeom.cpp \
- /usr/include/stdc-predef.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/ObiektGeom.hh \
- /usr/include/c++/11/string \
+ /home/szylux/Desktop/Rover/src/ObiektGeom.cpp /usr/include/stdc-predef.h \
+ /home/szylux/Desktop/Rover/inc/ObiektGeom.hh /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -153,9 +151,9 @@ CMakeFiles/program.dir/src/ObiektGeom.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/SVector.hh \
- /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
- /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
+ /home/szylux/Desktop/Rover/inc/SVector.hh /usr/include/c++/11/iostream \
+ /usr/include/c++/11/ostream /usr/include/c++/11/ios \
+ /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/system_error \
@@ -172,9 +170,8 @@ CMakeFiles/program.dir/src/ObiektGeom.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/SMatrix.hh \
- /usr/include/c++/11/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /home/szylux/Desktop/Rover/inc/SMatrix.hh /usr/include/c++/11/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -196,9 +193,9 @@ CMakeFiles/program.dir/src/ObiektGeom.cpp.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/ObrysXY.hh \
- /home/szylux/Desktop/lol/kpo-zad-6-2-main/inc/TypKolizji.hh \
- /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /home/szylux/Desktop/Rover/inc/ObrysXY.hh \
+ /home/szylux/Desktop/Rover/inc/TypKolizji.hh /usr/include/c++/11/fstream \
+ /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc

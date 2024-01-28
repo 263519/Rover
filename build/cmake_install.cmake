@@ -1,4 +1,4 @@
-# Install script for directory: /home/szylux/Desktop/lol/kpo-zad-6-2-main
+# Install script for directory: /home/szylux/Desktop/Rover
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/_deps/doctest-build/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/tests/cmake_install.cmake")
+  include("/home/szylux/Desktop/Rover/build/tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/szylux/Desktop/lol/kpo-zad-6-2-main/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/szylux/Desktop/Rover/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
