@@ -202,7 +202,7 @@ void Scena::WyswietlListeProbek() {
     // cout<<"Bryla Wzorcowa "<<Ob->get_NazwaPliku_BrylaWzorcowa() <<endl;
 
     if (Ob->get_NazwaPliku_BrylaWzorcowa() ==
-        "../bryly_wzorcowe/szescian2.dat" && Ob->get_NazwaObiektu() != "pobrana") {
+        "../bryly_wzorcowe/szescian2.dat" ) {
       ++i;
       cout << i << ". " << Ob->get_NazwaObiektu() << endl;
     }
@@ -222,9 +222,9 @@ void Scena::PodniesProbke() {
     cout << "Opcja dostępna tylko dla Lazika SFR! " << endl;
 
   else {
-    
+    auto it = ObiektLista.begin();
     for (shared_ptr<ObiektGeom> &Ob : ObiektLista) {
-      list<shared_ptr<ObiektGeom>>::iterator it = ObiektLista.begin();
+    
     
     
 
@@ -239,12 +239,15 @@ void Scena::PodniesProbke() {
             lazikSFR->Dodaj_Probke(Ob);
             Ob->set_Polozenie() = Wysoko;
             Ob->Przelicz_i_Zapisz_Wierzcholki();
-            Ob->set_NazwaObiektu() = "pobrana";
+            //Ob->set_NazwaObiektu() = "pobrana";
             
             Lacze.Rysuj();
+      
             ObiektLista.erase(it);
+        
+           
             UsunDoListyRysowania(Lacze, *Ob);
-
+            return;
             //lista_tmp = ObiektLista;
           }
 
@@ -253,8 +256,10 @@ void Scena::PodniesProbke() {
           // cin.ignore(100, '\n');
         //}
       }
-        ++it;
+  
+    
     }
+        ++it;
     }
 }
 }
@@ -290,8 +295,12 @@ void Scena::Menu() {
 
       break;
     case 'p':
+
+
       PodniesProbke();
 
+  
+  cout << endl;
       break;
     case 'w':
       cout << "Podaj nuemr Lazika, ktory chcesz wybrac: " << endl;
