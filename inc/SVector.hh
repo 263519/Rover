@@ -28,7 +28,8 @@ class SVector {
     SVector<Type,Size> operator / (const double &tmp);
     bool operator == (const  SVector<Type,Size> tmp)const ;
     SVector<Type,Size> operator * (SVector<Type,Size> Vector2) const; // iloczyn wektorowy 
-
+    Type return_x(){return size[0];}
+    Type return_y(){return size[1];}
   //   SVector(){
 
   //     ++ilosc;
