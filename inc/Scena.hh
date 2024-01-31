@@ -40,6 +40,7 @@ void WyswietlListeProbek();
 void Menu();
 void PodniesProbke();
 
+void AutonomousDrive();
 ~Scena(){
     std::cout<<"Scena Destructor is running\n";
 }

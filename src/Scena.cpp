@@ -41,37 +41,55 @@ Scena::Scena() {
   Vector3D Skala(skala);
 
   double polozenie1[3] = {0, 0, 0};
-  double polozenie2[3] = {-40, -10, 0};
-  double polozenie3[3] = {30, 0, 0};
-  double polozenie4[3] = {70, 0, 0};
-  double polozenie5[3] = {80, 0, 0};
+ // double polozenie2[3] = {-40, -10, 0};
+  double polozenie3[3] = {-80, 0, 0};
+   double polozenie4[3] = {40, 0, 0};
+  double polozenie5[3] = {40, 0, 0};
+    double polozenie6[3] = {0, 40, 0};
 
   Vector3D Polozenie1(polozenie1);
-  Vector3D Polozenie2(polozenie2);
+  //Vector3D Polozenie2(polozenie2);
   Vector3D Polozenie3(polozenie3);
   Vector3D Polozenie4(polozenie4);
   Vector3D Polozenie5(polozenie5);
+  Vector3D Polozenie6(polozenie6);
 
   // 135 315
   ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
                                               "FSR", Kolor_JasnoNiebieski,
                                               Skala, Polozenie1, 0, 10, 33));
-  ObiektLista.push_back(make_shared<Lazik>("../bryly_wzorcowe/szescian3.dat",
-                                           "Perseverance", Kolor_Czerwony,
-                                           Skala, Polozenie2, 0, 10, 15));
+  // ObiektLista.push_back(make_shared<Lazik>("../bryly_wzorcowe/szescian3.dat",
+  //                                          "Perseverance", Kolor_Czerwony,
+  //                                          Skala, Polozenie2, 0, 10, 15));
 
   ObiektLista.push_back(make_shared<ProbkaRegolitu>(
       "../bryly_wzorcowe/szescian2.dat", "Coulettes", Kolor_Czerwony,
       Skala * 0.2, Polozenie3, 0));
   ObiektLista.push_back(
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salette",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie4, 22));
-  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Dourbes",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie5, 0));
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie4, 0));
+
     ObiektLista.push_back(
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Louda",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie3*(2), 0));
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie6, 0));
+                                  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salette2",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie4*1.3, 0));
+  // ObiektLista.push_back(
+  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Dourbes2",
+  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie5*1.3, 0));
+    ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Louda2",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie6*1.3, 0));
+  //                                   ObiektLista.push_back(
+  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salette3",
+  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie4*(-1.5), 0));
+  // ObiektLista.push_back(
+  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Dourbes3",
+  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie5*(-0.9), 0));
+  //   ObiektLista.push_back(
+  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Louda3",
+  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie6*(-0.9), 0));
 
   for (shared_ptr<ObiektGeom> &Ob : ObiektLista) {
     DodajDoListyRysowania(Lacze, *Ob);
@@ -126,7 +144,7 @@ void Scena::Odleglosc(double Odleglosc) {
   int t = abs(Odleglosc);
 
   do {
-
+   
     WybranyLazik->set_Polozenie() =
         WybranyLazik->get_Polozenie() + jedz / Odleglosc;
     WybranyLazik->Przelicz_i_Zapisz_Wierzcholki();
@@ -149,7 +167,7 @@ void Scena::Odleglosc(double Odleglosc) {
           cout << "Zderzenie podczas jazdy" << endl;
           cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie."
                << endl;
-          cin.ignore(100, '\n');
+          //cin.ignore(100, '\n');
 
           t = 1;
         }
@@ -162,10 +180,12 @@ void Scena::Odleglosc(double Odleglosc) {
 
 // theta
 void Scena::Obrot(double stopnie) {
-
+if(stopnie==0) return;
   int t = abs(stopnie);
   double theta = (stopnie * M_PI) / 180;
   double czesc_obrotu = theta / t;
+
+  
 
   do {
 
@@ -183,7 +203,7 @@ void Scena::Obrot(double stopnie) {
             cout << "Zderzenie podczas jazdy" << endl;
           cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie."
                << endl;
-          cin.ignore(100, '\n');
+         // cin.ignore(100, '\n');
           t = 0;
         }
       }
@@ -191,6 +211,7 @@ void Scena::Obrot(double stopnie) {
     usleep(100000 / WybranyLazik->get_Szybkosc());
 
   } while (--t);
+
 }
 
 void Scena::WyswietlListeProbek() {
@@ -264,12 +285,64 @@ void Scena::PodniesProbke() {
 }
 }
 
+
+
+void Scena::AutonomousDrive() {
+
+  float delta_x, delta_y;
+cout << "xd\n";
+  for (list < shared_ptr < ObiektGeom >> ::iterator it = ObiektLista.begin(); it != ObiektLista.end(); it++) {
+    cout << "xd\n";
+    if (( * it) -> get_NazwaPliku_BrylaWzorcowa() == "../bryly_wzorcowe/szescian2.dat") {
+      cout << "xd\n";
+      cout << "Start lolo\n";
+//   cout<<"Kolejne X: "<<(( * it) -> get_Polozenie().return_x())<< ", Y "<<(( * it) -> get_Polozenie().return_y())<<"\n";
+//  cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie."
+//                << endl;
+        //  cin.ignore(100, '\n');
+
+
+      delta_x = -WybranyLazik -> get_Polozenie().return_x() + ( * it) -> get_Polozenie().return_x();
+      delta_y = -WybranyLazik -> get_Polozenie().return_y() + ( * it) -> get_Polozenie().return_y();
+   
+      float tan = (atan2(delta_y, delta_x)) * (180 / 3.14);
+      // if(tan<0){
+      //   tan+=(3.14/2);
+      // }
+
+//        cout<<"Kat obrotu: "<<tan-(WybranyLazik->get_KatOrientacji()* (180 / 3.14))<<"\n";
+//  cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie."
+  //             << endl;
+        //  cin.ignore(100, '\n');
+          
+      Obrot(tan-(WybranyLazik->get_KatOrientacji()* (180 / 3.14)));
+      Odleglosc(900);
+      PodniesProbke();
+      cout << "tangens" << tan << "\n";
+      cout<<"Kat"<<-WybranyLazik->get_KatOrientacji()<<"\n";
+     
+      it = ObiektLista.begin();
+  
+  
+    }
+    //return;
+    WyswietlListeProbek();
+    cout<<"NE\n";
+  }
+   WyswietlListeProbek();
+      return;
+  cout << "Koniec\n";
+}
+
+
+
 void Scena::Menu() {
   int t = 1, wybor;
   char znak;
   double odleglosc, kat;
 
   WybierzLazik(1);
+  AutonomousDrive();
 
   while (t) {
     cout << "--------------------------------------" << endl;
