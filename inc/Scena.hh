@@ -12,6 +12,7 @@
 #include "ProbkaRegolitu.hh"
 #include <cstring>
 #include "LazikSFR.hh"
+#include <csignal>
 
 
 
@@ -38,7 +39,11 @@ void Odleglosc(double Odleglosc);
 void Obrot(double theta);
 void WyswietlListeProbek();
 void Menu();
-void PodniesProbke();
+std::list<std::shared_ptr<ObiektGeom>>::iterator  PodniesProbke();
+
+
+
+
 
 void AutonomousDrive();
 ~Scena(){

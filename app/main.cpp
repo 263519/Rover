@@ -105,3 +105,4 @@ int main() {
   cout << "Nacisnij klawisz ENTER, aby zakonczyc." << endl;
   cin.ignore(100, '\n');
 }
+
