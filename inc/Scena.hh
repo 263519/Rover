@@ -13,6 +13,7 @@
 #include <cstring>
 #include "LazikSFR.hh"
 #include <csignal>
+#include <climits>
 
 
 
@@ -40,7 +41,7 @@ void Obrot(double theta);
 void WyswietlListeProbek();
 void Menu();
 std::list<std::shared_ptr<ObiektGeom>>::iterator  PodniesProbke();
-
+void* AutonomousDriveThreads(void * argument);
 
 
 

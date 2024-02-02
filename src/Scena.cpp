@@ -41,12 +41,12 @@ Scena::Scena() {
   Vector3D Skala(skala);
 
   double polozenie1[3] = {100, 0, 0};
- // double polozenie2[3] = {-40, -10, 0};
+  double polozenie2[3] = {-100, 0, 0};
   double polozenie3[3] = {-35, -40, 0};
    double polozenie4[3] = {50,-40, 0};
   double polozenie5[3] = {-30,60, 0};
     double polozenie6[3] = {10, 50, 0};
-      double polozenie7[3] = {50, 0, 0};
+      double polozenie7[3] = {50, 50, 0};
    double polozenie8[3] = {40,20, 0};
   double polozenie9[3] = {-10, 0, 0};
     double polozenie10[3] = {-15, 25, 0};
@@ -56,7 +56,7 @@ Scena::Scena() {
     double polozenie14[3] = {-15, 75, 0};
 
   Vector3D Polozenie1(polozenie1);
-  //Vector3D Polozenie2(polozenie2);
+  Vector3D Polozenie2(polozenie2);
   Vector3D Polozenie3(polozenie3);
   Vector3D Polozenie4(polozenie4);
   Vector3D Polozenie5(polozenie5);
@@ -72,11 +72,11 @@ Scena::Scena() {
 
   // 135 315
   ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
-                                              "FSR", Kolor_JasnoNiebieski,
+                                              "FSRxpp", Kolor_JasnoNiebieski,
                                               Skala, Polozenie1, 0, 100, 33));
-  // ObiektLista.push_back(make_shared<Lazik>("../bryly_wzorcowe/szescian3.dat",
-  //                                          "Perseverance", Kolor_Czerwony,
-  //                                          Skala, Polozenie2, 0, 10, 15));
+  ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
+                                           "FSR", Kolor_JasnoNiebieski,
+                                           Skala, Polozenie2, 0, 10, 15));
 
     ObiektLista.push_back(
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Lolllluda",
@@ -96,19 +96,19 @@ Scena::Scena() {
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukkkda33",
                                   Kolor_Czerwony, Skala * 0.2, Polozenie7, 0));
 
-  ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-      "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
-      Skala * 0.2, Polozenie4*0.8, 0));
-  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhhhette525",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie8, 0));
+  // ObiektLista.push_back(make_shared<ProbkaRegolitu>(
+  //     "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
+  //     Skala * 0.2, Polozenie4*0.8, 0));
+  // ObiektLista.push_back(
+  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhhhette525",
+  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie8, 0));
 
-                                  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaahhhette212515",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie9, 0));
-                                                           ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "mekkkkduska",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie10, 0));
+  //                                 ObiektLista.push_back(
+  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaahhhette212515",
+  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie9, 0));
+  //                                                          ObiektLista.push_back(
+  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "mekkkkduska",
+  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie10, 0));
   //                                                                ObiektLista.push_back(
   //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Sa;;;wwwwlette2",
   //                                 Kolor_Czerwony, Skala * 0.2, Polozenie11, 0));
@@ -192,7 +192,8 @@ shared_ptr<Lazik> Scena::WybierzLazik(unsigned int wybor) {
 
     if (i == wybor) {
 
-      if (Ob->get_NazwaObiektu() == "FSR") {
+      if (Ob->get_NazwaObiektu().find("FSR", 0)>=3){
+    
 
         this->WybranyLazik = dynamic_pointer_cast<LazikSFR>(Ob);
         return dynamic_pointer_cast<LazikSFR>(Ob);
@@ -309,12 +310,12 @@ void Scena::WyswietlListeProbek() {
 list<shared_ptr<ObiektGeom>>::iterator Scena::PodniesProbke() {
 
   //list<shared_ptr<ObiektGeom>> lista_tmp = ObiektLista;
-  double wysoko[3] = {80, 80, 0};
+  double wysoko[3] = {999, 999, 999};
   Vector3D Wysoko(wysoko);
 
 
 
-  if (WybranyLazik->get_NazwaObiektu() != "FSR")
+  if (WybranyLazik->get_NazwaObiektu().find("FSR", 0)>=3)
     cout << "Opcja dostępna tylko dla Lazika SFR! " << endl;
 
   else {
@@ -370,6 +371,22 @@ void Scena::AutonomousDrive() {
 
   //list < shared_ptr < ObiektGeom >> ::iterator it = ObiektLista.begin();
  for (list < shared_ptr < ObiektGeom >> ::iterator it= ObiektLista.begin(); it != ObiektLista.end(); ++it) {
+
+
+int najkrotsza = INT_MAX;
+     for (list < shared_ptr < ObiektGeom >> ::iterator kt= ObiektLista.begin(); kt != ObiektLista.end(); ++kt) {
+        if (( * kt) -> get_NazwaPliku_BrylaWzorcowa() != "../bryly_wzorcowe/szescian3.dat") {
+           delta_x = -WybranyLazik -> get_Polozenie().return_x() + ( * kt) -> get_Polozenie().return_x();
+      delta_y = -WybranyLazik -> get_Polozenie().return_y() + ( * kt) -> get_Polozenie().return_y();
+      
+        if(najkrotsza> sqrt(delta_x*delta_x + delta_y*delta_y)){
+          najkrotsza = sqrt(delta_x*delta_x + delta_y*delta_y);
+          it=kt;
+        }
+
+
+        }
+     }
     cout << "xd\n";
 
     if (( * it) -> get_NazwaPliku_BrylaWzorcowa() != "../bryly_wzorcowe/szescian3.dat") {
@@ -417,6 +434,11 @@ void Scena::AutonomousDrive() {
  }
 
   cout << "Koniec\n";
+}
+
+void* Scena::AutonomousDriveThreads(void * argument){
+cout<<(long)(argument)<<"\n";
+return nullptr;
 }
 
 
