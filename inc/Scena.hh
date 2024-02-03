@@ -18,6 +18,7 @@
 
 
 
+
 class Scena {
 PzG::LaczeDoGNUPlota Lacze;
 std::shared_ptr<Lazik> WybranyLazik;
@@ -41,7 +42,7 @@ void Obrot(double theta);
 void WyswietlListeProbek();
 void Menu();
 std::list<std::shared_ptr<ObiektGeom>>::iterator  PodniesProbke();
-void* AutonomousDriveThreads(void * argument);
+
 
 
 

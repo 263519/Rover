@@ -436,10 +436,7 @@ int najkrotsza = INT_MAX;
   cout << "Koniec\n";
 }
 
-void* Scena::AutonomousDriveThreads(void * argument){
-cout<<(long)(argument)<<"\n";
-return nullptr;
-}
+
 
 
 
@@ -450,8 +447,7 @@ void Scena::Menu() {
 
 
 
-
-  WybierzLazik(1);
+WybierzLazik(1);
 
 
   while (t) {
@@ -510,6 +506,8 @@ void Scena::Menu() {
       break;
     }
   }
+
+
 
   cout<<usuniete_rzeczy<<" Usuniete xpp\n";
 }
