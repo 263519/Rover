@@ -40,8 +40,8 @@ Scena::Scena() {
   double skala[3] = {20, 20, 10};
   Vector3D Skala(skala);
 
-  double polozenie1[3] = {100, 0, 0};
-  double polozenie2[3] = {-100, 0, 0};
+  double polozenie1[3] = {-100, 0, 0};
+  double polozenie2[3] = {0, 100, 0};
   double polozenie3[3] = {-35, -40, 0};
    double polozenie4[3] = {50,-40, 0};
   double polozenie5[3] = {-30,60, 0};
@@ -78,6 +78,9 @@ Scena::Scena() {
                                            "FSR", Kolor_JasnoNiebieski,
                                            Skala, Polozenie2, 0, 10, 15));
 
+     ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
+                                           "FSRorza", Kolor_JasnoNiebieski,
+                                           Skala, Polozenie1*(-1)+Polozenie2*(-1), 0, 10, 15));
     ObiektLista.push_back(
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Lolllluda",
                                   Kolor_Czerwony, Skala * 0.2, Polozenie3, 0));
@@ -96,49 +99,49 @@ Scena::Scena() {
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukkkda33",
                                   Kolor_Czerwony, Skala * 0.2, Polozenie7, 0));
 
-  // ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-  //     "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
-  //     Skala * 0.2, Polozenie4*0.8, 0));
-  // ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhhhette525",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie8, 0));
+  ObiektLista.push_back(make_shared<ProbkaRegolitu>(
+      "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
+      Skala * 0.2, Polozenie4*0.8, 0));
+  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhhhette525",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie8, 0));
 
-  //                                 ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaahhhette212515",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie9, 0));
-  //                                                          ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "mekkkkduska",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie10, 0));
-  //                                                                ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Sa;;;wwwwlette2",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie11, 0));
-  //                                   ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukkkkkkda33",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie12, 0));
+                                  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaahhhette212515",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie9, 0));
+                                                           ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "mekkkkduska",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie10, 0));
+                                                                 ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Sa;;;wwwwlette2",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie11, 0));
+                                    ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukkkkkkda33",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie12, 0));
 
-  // ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-  //     "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;kkklettes", Kolor_Czerwony,
-  //     Skala * 0.2, Polozenie4*0.8, 0));
-  // ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhkkkkhhette525",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie13, 0));
+  ObiektLista.push_back(make_shared<ProbkaRegolitu>(
+      "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;kkklettes", Kolor_Czerwony,
+      Skala * 0.2, Polozenie4*0.8, 0));
+  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhkkkkhhette525",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie13, 0));
 
-  //                                 ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaahhjkjkhette212515",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie14, 0));
+                                  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaahhjkjkhette212515",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie14, 0));
                                                   
  
 
-      //                             ObiektLista.push_back(
-      // make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Sa;;;www3wl46ette2",
-      //                             Kolor_Czerwony, Skala * 0.2, Polozenie6*(0.6), 0));
-      //                               ObiektLista.push_back(
-      // make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukk564kda33",
-      //                             Kolor_Czerwony, Skala * 0.2, Polozenie7*(0.5), 0));
+                                  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Sa;;;www3wl46ette2",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie6*(0.6), 0));
+                                    ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukk564kda33",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie7*(0.5), 0));
 
-  // ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-  //     "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
-  //     Skala * 0.2, Polozenie4*1.4, 0));
+  ObiektLista.push_back(make_shared<ProbkaRegolitu>(
+      "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
+      Skala * 0.2, Polozenie4*1.4, 0));
   // ObiektLista.push_back(
   //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhh46hette525",
   //                                 Kolor_Czerwony, Skala * 0.2, Polozenie8*(0.8), 0));
