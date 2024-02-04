@@ -13,33 +13,29 @@
 using namespace std;
 
 
-constexpr int ilosc_watkow = 1;
 
 
 
 
-void* AutonomousDriveThreads(void * argument){
-  Scena *id = (*Scena)argument;
-  cout<<id<<"\n";
-  // WybierzLazik(id);
-  // AutonomousDrive();
 
-  pthread_exit(0);
-}
+
 
 
 int main() {
   // PzG::LaczeDoGNUPlota  Lacze;
-  Scena *s = new Scena();
+  Scena s[3];
+  
 
-  s->Menu();
- 
+  //s.Menu();
+ s[0].thread_counter=1;
+ s[1].thread_counter=2;
+ s[2].thread_counter=3;
 
 
   pthread_t roboty[ilosc_watkow];
 
   for(long i=0; i< ilosc_watkow; i++){
-    pthread_create(&roboty[i], NULL, AutonomousDriveThreads, (void *)s);
+    pthread_create(&roboty[i], NULL, &Scena::AutonomousDriveThreads_helper, &s[i]);
   }
 
 
