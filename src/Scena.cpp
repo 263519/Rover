@@ -47,7 +47,7 @@ Scena::Scena() {
   double polozenie5[3] = {-30,60, 0};
     double polozenie6[3] = {10, 50, 0};
       double polozenie7[3] = {50, 50, 0};
-   double polozenie8[3] = {40,20, 0};
+   double polozenie8[3] = {40,60, 0};
   double polozenie9[3] = {-10, 0, 0};
     double polozenie10[3] = {-15, 25, 0};
        double polozenie11[3] = {40, 20, 0};
@@ -73,7 +73,7 @@ Scena::Scena() {
   // 135 315
   ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
                                               "FSRxpp", Kolor_JasnoNiebieski,
-                                              Skala, Polozenie1, 0, 100, 33));
+                                              Skala, Polozenie1, 0, 10, 33));
   ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
                                            "FSR", Kolor_JasnoNiebieski,
                                            Skala, Polozenie2, 0, 10, 15));
@@ -99,9 +99,9 @@ Scena::Scena() {
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukkkda33",
                                   Kolor_Czerwony, Skala * 0.2, Polozenie7, 0));
 
-  ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-      "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
-      Skala * 0.2, Polozenie4*0.8, 0));
+  // ObiektLista.push_back(make_shared<ProbkaRegolitu>(
+  //     "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
+  //     Skala * 0.2, Polozenie4*0.8, 0));
   ObiektLista.push_back(
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhhhette525",
                                   Kolor_Czerwony, Skala * 0.2, Polozenie8, 0));
@@ -139,34 +139,34 @@ Scena::Scena() {
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukk564kda33",
                                   Kolor_Czerwony, Skala * 0.2, Polozenie7*(0.5), 0));
 
-  ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-      "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
-      Skala * 0.2, Polozenie4*1.4, 0));
-  // ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhh46hette525",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie8*(0.8), 0));
+  // ObiektLista.push_back(make_shared<ProbkaRegolitu>(
+  //     "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
+  //     Skala * 0.2, Polozenie4*1.4, 0));
+  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhh46hette525",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie8*(0.8), 0));
 
-  //                                 ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaah46hhette212515",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie9*1.1, 0));
-  //                                                          ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "med46uska",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie10*1.2, 0));
-  // ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Dou44624rbes2",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie5*1.2, 0));
-  //   ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Lou5a64sdasd5da2",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie6*1.1, 0));
-  //                                   ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salee64eeee2dfdg15ette3",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie4*(-1.1), 0));
-  // ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Doujj64dfgdfrbes3",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie5*(-0.4), 0));
-  //   ObiektLista.push_back(
-  //     make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "er64fggg",
-  //                                 Kolor_Czerwony, Skala * 0.2, Polozenie6*(-0.6), 0));
+                                  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaah46hhette212515",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie9*1.1, 0));
+                                                           ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "med46uska",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie10*1.2, 0));
+  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Dou44624rbes2",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie5*1.2, 0));
+    ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Lou5a64sdasd5da2",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie6*1.1, 0));
+                                    ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salee64eeee2dfdg15ette3",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie4*(-1.1), 0));
+  ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Doujj64dfgdfrbes3",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie5*(-0.4), 0));
+    ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "er64fggg",
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie6*(-0.6), 0));
                                   
 
   for (shared_ptr<ObiektGeom> &Ob : ObiektLista) {
@@ -328,26 +328,27 @@ list<shared_ptr<ObiektGeom>>::iterator Scena::PodniesProbke() {
     
     
 
-      if (WybranyLazik->WezNazweObiektu() != Ob->WezNazweObiektu()) {
-  cout<<"Typ kolizji"<<Ob->Czy_Zderzenie(WybranyLazik)<<"\n";
-        if (Ob->Czy_Zderzenie(WybranyLazik)) {
+      if ((*it)->WezNazweObiektu() != "../bryly_wzorcowe/szescian3.dat") {
+  cout<<"Typ kolizji"<<(*it)->Czy_Zderzenie(WybranyLazik)<<"\n";
+        if ((*it)->Czy_Zderzenie(WybranyLazik)) {
 
-          if (Ob->Czy_Zderzenie(WybranyLazik) == PrzejazdNadProbka || Ob->Czy_Zderzenie(WybranyLazik) == KolizjaZProbka) {
+          if ((*it)->Czy_Zderzenie(WybranyLazik) == PrzejazdNadProbka || (*it)->Czy_Zderzenie(WybranyLazik) == KolizjaZProbka) {
 
             shared_ptr<LazikSFR> lazikSFR;
             lazikSFR = dynamic_pointer_cast<LazikSFR>(WybranyLazik);
-            lazikSFR->Dodaj_Probke(Ob);
-            Ob->set_Polozenie() = Wysoko;
-            Ob->Przelicz_i_Zapisz_Wierzcholki();
+            lazikSFR->Dodaj_Probke((*it));
+            (*it)->set_Polozenie() = Wysoko;
+           (*it)->Przelicz_i_Zapisz_Wierzcholki();
             //Ob->set_NazwaObiektu() = "pobrana";
              usuniete_rzeczy+=' '+(*it)->WezNazweObiektu();
             Lacze.Rysuj();
       
+        if ((*it)->WezNazweObiektu() != "../bryly_wzorcowe/szescian3.dat") {
             it=ObiektLista.erase(it);
-        
+        }
            
             UsunDoListyRysowania(Lacze, *Ob);
-            return --it;
+            return it;
             //lista_tmp = ObiektLista;
           }
 
@@ -362,7 +363,9 @@ list<shared_ptr<ObiektGeom>>::iterator Scena::PodniesProbke() {
         ++it;
     }
 }
-return ObiektLista.begin();
+    auto it = ObiektLista.begin();
+    it++;
+return it;
 }
 
 
@@ -373,8 +376,8 @@ void Scena::AutonomousDrive() {
   cout << "xd\n";
 
   //list < shared_ptr < ObiektGeom >> ::iterator it = ObiektLista.begin();
- for (list < shared_ptr < ObiektGeom >> ::iterator it= ObiektLista.begin(); it != ObiektLista.end(); ++it) {
-
+ while(1) {
+list < shared_ptr < ObiektGeom >> ::iterator it = ObiektLista.begin();
 
 int najkrotsza = INT_MAX;
      for (list < shared_ptr < ObiektGeom >> ::iterator kt= ObiektLista.begin(); kt != ObiektLista.end(); ++kt) {
@@ -386,13 +389,18 @@ int najkrotsza = INT_MAX;
           najkrotsza = sqrt(delta_x*delta_x + delta_y*delta_y);
           it=kt;
         }
+        list < shared_ptr < ObiektGeom >> ::iterator end = kt;
+        end++;
+        if(end == ObiektLista.end() && (najkrotsza == INT_MAX)){
+          return;
+        }
 
 
         }
      }
     cout << "xd\n";
 
-    if (( * it) -> get_NazwaPliku_BrylaWzorcowa() != "../bryly_wzorcowe/szescian3.dat") {
+    // if (( * it) -> get_NazwaPliku_BrylaWzorcowa() != "../bryly_wzorcowe/szescian3.dat") {
       cout << "xd\n";
       cout << WybranyLazik -> get_Polozenie().return_x() << " polozenie x\n";
       cout << "Start lolo\n";
@@ -423,18 +431,18 @@ int najkrotsza = INT_MAX;
       //it = ObiektLista.begin()++;
 
       
-    }
+    //}
  }
   //  else{
   //   ++it;
   //  }
- for (list < shared_ptr < ObiektGeom >> ::iterator it= ObiektLista.begin(); it != ObiektLista.end(); ++it) {
+//  for (list < shared_ptr < ObiektGeom >> ::iterator it= ObiektLista.begin(); it != ObiektLista.end(); ++it) {
  
 
-    if (( * it) -> get_NazwaPliku_BrylaWzorcowa() != "../bryly_wzorcowe/szescian3.dat") {
-        AutonomousDrive();
-    }
- }
+//     if (( * it) -> get_NazwaPliku_BrylaWzorcowa() != "../bryly_wzorcowe/szescian3.dat") {
+//         AutonomousDrive();
+//     }
+//  }
 
   cout << "Koniec\n";
 }

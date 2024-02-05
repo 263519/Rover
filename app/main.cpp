@@ -28,14 +28,15 @@ int main() {
 
   //s.Menu();
  s[0].thread_counter=1;
- s[1].thread_counter=2;
- s[2].thread_counter=3;
+  s[1].thread_counter=2;
+  s[2].thread_counter=3;
 
 
   pthread_t roboty[ilosc_watkow];
 
   for(long i=0; i< ilosc_watkow; i++){
     pthread_create(&roboty[i], NULL, &Scena::AutonomousDriveThreads_helper, &s[i]);
+
   }
 
 
