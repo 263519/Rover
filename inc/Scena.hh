@@ -17,7 +17,7 @@
 
 
 
-constexpr int ilosc_watkow = 3;
+constexpr int ilosc_watkow = 1;
 
 
 class Scena {
@@ -43,7 +43,7 @@ void Obrot(double theta);
 void WyswietlListeProbek();
 void Menu();
 std::list<std::shared_ptr<ObiektGeom>>::iterator  PodniesProbke();
-
+void PlaceSample();
 
 void* AutonomousDriveThreads(){
 //   long id = (long)argument;

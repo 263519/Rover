@@ -41,133 +41,29 @@ Scena::Scena() {
   Vector3D Skala(skala);
 
   double polozenie1[3] = {-100, 0, 0};
-  double polozenie2[3] = {0, 100, 0};
-  double polozenie3[3] = {-35, -40, 0};
-   double polozenie4[3] = {50,-40, 0};
-  double polozenie5[3] = {-30,60, 0};
-    double polozenie6[3] = {10, 50, 0};
-      double polozenie7[3] = {50, 50, 0};
-   double polozenie8[3] = {40,60, 0};
-  double polozenie9[3] = {-10, 0, 0};
-    double polozenie10[3] = {-15, 25, 0};
-       double polozenie11[3] = {40, 20, 0};
-      double polozenie12[3] = {-50, 0, 0};
-   double polozenie13[3] = {-40,-20, 0};
-    double polozenie14[3] = {-15, 75, 0};
+  // double polozenie2[3] = {0, 100, 0};
+  // double polozenie3[3] = {-35, -40, 0};
+
 
   Vector3D Polozenie1(polozenie1);
-  Vector3D Polozenie2(polozenie2);
-  Vector3D Polozenie3(polozenie3);
-  Vector3D Polozenie4(polozenie4);
-  Vector3D Polozenie5(polozenie5);
-  Vector3D Polozenie6(polozenie6);
-   Vector3D Polozenie7(polozenie7);
-  Vector3D Polozenie8(polozenie8);
-  Vector3D Polozenie9(polozenie9);
-    Vector3D Polozenie10(polozenie10);
-    Vector3D Polozenie11(polozenie11);
-  Vector3D Polozenie12(polozenie12);
-  Vector3D Polozenie13(polozenie13);
-    Vector3D Polozenie14(polozenie14);
+  // Vector3D Polozenie2(polozenie2);
+  // Vector3D Polozenie3(polozenie3);
+  
 
   // 135 315
   ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
                                               "FSRxpp", Kolor_JasnoNiebieski,
                                               Skala, Polozenie1, 0, 10, 33));
-  ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
-                                           "FSR", Kolor_JasnoNiebieski,
-                                           Skala, Polozenie2, 0, 10, 15));
+  // ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
+  //                                          "FSR", Kolor_JasnoNiebieski,
+  //                                          Skala, Polozenie2, 0, 10, 15));
 
-     ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
-                                           "FSRorza", Kolor_JasnoNiebieski,
-                                           Skala, Polozenie1*(-1)+Polozenie2*(-1), 0, 10, 15));
-    ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Lolllluda",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie3, 0));
-
-  ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-      "../bryly_wzorcowe/szescian2.dat", "Couletkkkkkktes", Kolor_Czerwony,
-      Skala * 0.2, Polozenie4, 0));
-  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Saaaaaaaalette",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie5, 0));
-
-                                  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Sa;;;wwwwlette2",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie6, 0));
-                                    ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukkkda33",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie7, 0));
-
-  // ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-  //     "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
-  //     Skala * 0.2, Polozenie4*0.8, 0));
-  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhhhette525",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie8, 0));
-
-                                  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaahhhette212515",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie9, 0));
-                                                           ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "mekkkkduska",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie10, 0));
-                                                                 ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Sa;;;wwwwlette2",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie11, 0));
-                                    ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukkkkkkda33",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie12, 0));
-
-  ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-      "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;kkklettes", Kolor_Czerwony,
-      Skala * 0.2, Polozenie4*0.8, 0));
-  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhkkkkhhette525",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie13, 0));
-
-                                  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaahhjkjkhette212515",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie14, 0));
-                                                  
+  //    ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
+  //                                          "FSRorza", Kolor_JasnoNiebieski,
+  //                                          Skala, Polozenie1*(-1)+Polozenie2*(-1), 0, 10, 15));
  
 
-                                  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Sa;;;www3wl46ette2",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie6*(0.6), 0));
-                                    ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Loukk564kda33",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie7*(0.5), 0));
-
-  // ObiektLista.push_back(make_shared<ProbkaRegolitu>(
-  //     "../bryly_wzorcowe/szescian2.dat", "Cou;;;;;;lettes", Kolor_Czerwony,
-  //     Skala * 0.2, Polozenie4*1.4, 0));
-  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salhh46hette525",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie8*(0.8), 0));
-
-                                  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salaah46hhette212515",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie9*1.1, 0));
-                                                           ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "med46uska",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie10*1.2, 0));
-  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Dou44624rbes2",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie5*1.2, 0));
-    ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Lou5a64sdasd5da2",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie6*1.1, 0));
-                                    ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Salee64eeee2dfdg15ette3",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie4*(-1.1), 0));
-  ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "Doujj64dfgdfrbes3",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie5*(-0.4), 0));
-    ObiektLista.push_back(
-      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", "er64fggg",
-                                  Kolor_Czerwony, Skala * 0.2, Polozenie6*(-0.6), 0));
-                                  
+  PlaceSample();
 
   for (shared_ptr<ObiektGeom> &Ob : ObiektLista) {
     DodajDoListyRysowania(Lacze, *Ob);
@@ -323,12 +219,14 @@ list<shared_ptr<ObiektGeom>>::iterator Scena::PodniesProbke() {
 
   else {
     auto it = ObiektLista.begin();
+ 
     for (shared_ptr<ObiektGeom> &Ob : ObiektLista) {
     
     
     
 
       if ((*it)->WezNazweObiektu() != "../bryly_wzorcowe/szescian3.dat") {
+  
   cout<<"Typ kolizji"<<(*it)->Czy_Zderzenie(WybranyLazik)<<"\n";
         if ((*it)->Czy_Zderzenie(WybranyLazik)) {
 
@@ -368,6 +266,33 @@ list<shared_ptr<ObiektGeom>>::iterator Scena::PodniesProbke() {
 return it;
 }
 
+void Scena::PlaceSample(){
+const char* names[] = {"Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace", "Henry", "Ivy", "Jack", "Katie", "Liam", "Mia", "Noah", "Olivia", "Patrick", "Quinn", "Ryan", "Samantha", "Tyler","Alice1", "Bob1", "Charlie1", "David1", "Emma1", "Frank1", "Grace1", "Henry1", "Ivy1", "Jack1", "Katie1", "Liam1", "Mia1", "Noah1", "Olivia1", "Patrick1", "Quinn1", "Ryan1", "Samantha1", "Tyler1"};
+
+
+for(int i = 0 ; i<40 ; i++){
+  double skala[3] = {20, 20, 10};
+  Vector3D Skala(skala);
+
+  double x = rand() % 200;
+  double y = rand() % 200;
+  double polozenie[3] = {x-100, y-100, 0};
+  Vector3D Polozenie(polozenie);
+
+   ObiektLista.push_back(
+      make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", names[i],
+     
+                                  Kolor_Czerwony, Skala * 0.2, Polozenie, 0));
+
+
+//  for (shared_ptr<ObiektGeom> &Ob : ObiektLista) {
+//     DodajDoListyRysowania(Lacze, *Ob);
+//     Ob->Przelicz_i_Zapisz_Wierzcholki();
+//   }
+
+  }
+}
+
 
 
 void Scena::AutonomousDrive() {
@@ -380,8 +305,12 @@ void Scena::AutonomousDrive() {
 list < shared_ptr < ObiektGeom >> ::iterator it = ObiektLista.begin();
 
 int najkrotsza = INT_MAX;
+   int probka_count = 0;
      for (list < shared_ptr < ObiektGeom >> ::iterator kt= ObiektLista.begin(); kt != ObiektLista.end(); ++kt) {
         if (( * kt) -> get_NazwaPliku_BrylaWzorcowa() != "../bryly_wzorcowe/szescian3.dat") {
+
+                probka_count++;
+
            delta_x = -WybranyLazik -> get_Polozenie().return_x() + ( * kt) -> get_Polozenie().return_x();
       delta_y = -WybranyLazik -> get_Polozenie().return_y() + ( * kt) -> get_Polozenie().return_y();
       
@@ -398,6 +327,8 @@ int najkrotsza = INT_MAX;
 
         }
      }
+
+     if(!probka_count) return;
     cout << "xd\n";
 
     // if (( * it) -> get_NazwaPliku_BrylaWzorcowa() != "../bryly_wzorcowe/szescian3.dat") {

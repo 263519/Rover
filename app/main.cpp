@@ -23,13 +23,14 @@ using namespace std;
 
 int main() {
   // PzG::LaczeDoGNUPlota  Lacze;
-  Scena s[3];
+  srand( time( NULL ) );
+  Scena s[1];
   
 
   //s.Menu();
  s[0].thread_counter=1;
-  s[1].thread_counter=2;
-  s[2].thread_counter=3;
+  // s[1].thread_counter=2;
+  // s[2].thread_counter=3;
 
 
   pthread_t roboty[ilosc_watkow];
