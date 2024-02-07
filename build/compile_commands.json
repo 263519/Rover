@@ -41,6 +41,16 @@
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
+  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o -c /home/szylux/Desktop/Rover/src/adjacency_list_graph.cpp",
+  "file": "/home/szylux/Desktop/Rover/src/adjacency_list_graph.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/Rover/build",
+  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o -c /home/szylux/Desktop/Rover/src/adjacency_matrix_graph.cpp",
+  "file": "/home/szylux/Desktop/Rover/src/adjacency_matrix_graph.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/Rover/build",
   "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/main.dir/app/main.cpp.o -c /home/szylux/Desktop/Rover/app/main.cpp",
   "file": "/home/szylux/Desktop/Rover/app/main.cpp"
 },

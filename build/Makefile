@@ -760,6 +760,54 @@ src/Scena.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Scena.cpp.s
 .PHONY : src/Scena.cpp.s
 
+src/adjacency_list_graph.o: src/adjacency_list_graph.cpp.o
+.PHONY : src/adjacency_list_graph.o
+
+# target to build an object file
+src/adjacency_list_graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o
+.PHONY : src/adjacency_list_graph.cpp.o
+
+src/adjacency_list_graph.i: src/adjacency_list_graph.cpp.i
+.PHONY : src/adjacency_list_graph.i
+
+# target to preprocess a source file
+src/adjacency_list_graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/adjacency_list_graph.cpp.i
+.PHONY : src/adjacency_list_graph.cpp.i
+
+src/adjacency_list_graph.s: src/adjacency_list_graph.cpp.s
+.PHONY : src/adjacency_list_graph.s
+
+# target to generate assembly for a file
+src/adjacency_list_graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/adjacency_list_graph.cpp.s
+.PHONY : src/adjacency_list_graph.cpp.s
+
+src/adjacency_matrix_graph.o: src/adjacency_matrix_graph.cpp.o
+.PHONY : src/adjacency_matrix_graph.o
+
+# target to build an object file
+src/adjacency_matrix_graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o
+.PHONY : src/adjacency_matrix_graph.cpp.o
+
+src/adjacency_matrix_graph.i: src/adjacency_matrix_graph.cpp.i
+.PHONY : src/adjacency_matrix_graph.i
+
+# target to preprocess a source file
+src/adjacency_matrix_graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.i
+.PHONY : src/adjacency_matrix_graph.cpp.i
+
+src/adjacency_matrix_graph.s: src/adjacency_matrix_graph.cpp.s
+.PHONY : src/adjacency_matrix_graph.s
+
+# target to generate assembly for a file
+src/adjacency_matrix_graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.s
+.PHONY : src/adjacency_matrix_graph.cpp.s
+
 src/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp.o
 .PHONY : src/lacze_do_gnuplota.o
 
@@ -851,6 +899,12 @@ help:
 	@echo "... src/Scena.o"
 	@echo "... src/Scena.i"
 	@echo "... src/Scena.s"
+	@echo "... src/adjacency_list_graph.o"
+	@echo "... src/adjacency_list_graph.i"
+	@echo "... src/adjacency_list_graph.s"
+	@echo "... src/adjacency_matrix_graph.o"
+	@echo "... src/adjacency_matrix_graph.i"
+	@echo "... src/adjacency_matrix_graph.s"
 	@echo "... src/lacze_do_gnuplota.o"
 	@echo "... src/lacze_do_gnuplota.i"
 	@echo "... src/lacze_do_gnuplota.s"

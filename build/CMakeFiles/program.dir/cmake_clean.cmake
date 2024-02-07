@@ -13,6 +13,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o.d"
   "CMakeFiles/program.dir/src/Scena.cpp.o"
   "CMakeFiles/program.dir/src/Scena.cpp.o.d"
+  "CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o"
+  "CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o.d"
+  "CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o"
+  "CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o.d"
   "CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
   "CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o.d"
 )

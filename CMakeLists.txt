@@ -46,6 +46,8 @@ set(SOURCES          # All .cpp files in src/
     src/ObrysXY.cpp
     src/ProbkaRegolitu.cpp
     src/LazikSFR.cpp
+    src/adjacency_list_graph.cpp
+    src/adjacency_matrix_graph.cpp
 )
 set(TESTFILES        # All .cpp files in tests/
     tests/main.cpp

@@ -296,13 +296,43 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  ../inc/adjacency_list_graph.hpp \
+  ../inc/graph.hpp \
+  ../inc/Vertex.h \
+  ../inc/Edge.h \
+  /usr/include/c++/11/unordered_map \
+  /usr/include/c++/11/bits/hashtable.h \
+  /usr/include/c++/11/bits/hashtable_policy.h \
+  /usr/include/c++/11/bits/enable_special_members.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/unordered_map.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  ../inc/Edge_adj.h \
+  ../inc/Vertex_adj.h \
+  ../inc/adjacency_matrix_graph.hpp \
+  ../inc/Vertex_matrix.h \
+  ../inc/Edge_matrix.h \
+  ../inc/Vertex_matrix2D.h \
   ../inc/lacze_do_gnuplota.hh \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc
+  /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h
 
+
+/usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/c++/11/ratio:
+
+/usr/include/c++/11/thread:
 
 /usr/include/c++/11/bits/fstream.tcc:
 
@@ -311,6 +341,22 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
 
 /usr/include/c++/11/fstream:
+
+../inc/Vertex_matrix2D.h:
+
+../inc/adjacency_matrix_graph.hpp:
+
+../inc/Edge_adj.h:
+
+/usr/include/c++/11/bits/unordered_map.h:
+
+/usr/include/c++/11/bits/hashtable_policy.h:
+
+/usr/include/c++/11/bits/hashtable.h:
+
+/usr/include/c++/11/unordered_map:
+
+../inc/Edge.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
@@ -373,6 +419,8 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/11/bit:
+
+../inc/Vertex_adj.h:
 
 /usr/include/c++/11/tr1/poly_laguerre.tcc:
 
@@ -514,6 +562,8 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
+/usr/include/c++/11/ctime:
+
 ../app/main.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
@@ -541,6 +591,8 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
+
+/usr/include/c++/11/chrono:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -602,6 +654,8 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 
 /usr/include/ctype.h:
 
+/usr/include/c++/11/bits/std_thread.h:
+
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
@@ -609,6 +663,8 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
+
+../inc/Edge_matrix.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -651,6 +707,10 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 /usr/include/c++/11/bits/predefined_ops.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/c++/11/bits/erase_if.h:
+
+../inc/Vertex.h:
 
 /usr/include/stdint.h:
 
@@ -732,6 +792,8 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 
 /usr/include/c++/11/bits/unique_ptr.h:
 
+../inc/graph.hpp:
+
 /usr/include/c++/11/ostream:
 
 /usr/include/limits.h:
@@ -770,6 +832,8 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 
 /usr/include/c++/11/bits/locale_classes.tcc:
 
+/usr/include/c++/11/bits/node_handle.h:
+
 /usr/include/c++/11/iostream:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
@@ -806,11 +870,17 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 
 /usr/include/c++/11/bits/list.tcc:
 
+/usr/include/c++/11/bits/this_thread_sleep.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
 /usr/include/c++/11/bits/codecvt.h:
+
+/usr/include/c++/11/bits/enable_special_members.h:
+
+../inc/adjacency_list_graph.hpp:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
 
@@ -891,6 +961,8 @@ CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 ../inc/ProbkaRegolitu.hh:
+
+../inc/Vertex_matrix.h:
 
 ../inc/ObrysXY.hh:
 

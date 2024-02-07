@@ -14,6 +14,8 @@
 #include "LazikSFR.hh"
 #include <csignal>
 #include <climits>
+#include "adjacency_list_graph.hpp"
+#include "adjacency_matrix_graph.hpp"
 
 
 
@@ -31,7 +33,7 @@ public:
 std::shared_ptr<Lazik> get_WybranyLazik() {return WybranyLazik;}
 std::shared_ptr<Lazik> &set_WybranyLazik() {return WybranyLazik;}
 
-int thread_counter = 1;
+//int thread_counter = 1;
 
 Scena();
 void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb);
@@ -45,18 +47,18 @@ void Menu();
 std::list<std::shared_ptr<ObiektGeom>>::iterator  PodniesProbke();
 void PlaceSample();
 
-void* AutonomousDriveThreads(){
-//   long id = (long)argument;
-   std::cout<<"Wszedl watek z nuemrem thread_counter"<<thread_counter<<"\n";
-  WybierzLazik(thread_counter);
-   thread_counter++;
-  AutonomousDrive();
-  pthread_exit(0);
-}
+// void* AutonomousDriveThreads(){
+// //   long id = (long)argument;
+//    std::cout<<"Wszedl watek z nuemrem thread_counter"<<thread_counter<<"\n";
+//   WybierzLazik(thread_counter);
+//    thread_counter++;
+//   AutonomousDrive();
+//   pthread_exit(0);
+// }
 
-static void *AutonomousDriveThreads_helper(void *context){
-    return ((Scena*) context)->AutonomousDriveThreads();
-}
+// static void *AutonomousDriveThreads_helper(void *context){
+//     return ((Scena*) context)->AutonomousDriveThreads();
+// }
 
 
 void AutonomousDrive();

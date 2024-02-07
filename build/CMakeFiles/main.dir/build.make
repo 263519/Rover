@@ -96,7 +96,9 @@ main_EXTERNAL_OBJECTS = \
 "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/Scena.cpp.o" \
 "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/ObrysXY.cpp.o" \
 "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o" \
-"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/LazikSFR.cpp.o"
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/LazikSFR.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o" \
+"/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o"
 
 main: CMakeFiles/main.dir/app/main.cpp.o
 main: CMakeFiles/program.dir/src/ObiektGeom.cpp.o
@@ -107,6 +109,8 @@ main: CMakeFiles/program.dir/src/Scena.cpp.o
 main: CMakeFiles/program.dir/src/ObrysXY.cpp.o
 main: CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o
 main: CMakeFiles/program.dir/src/LazikSFR.cpp.o
+main: CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o
+main: CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szylux/Desktop/Rover/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"

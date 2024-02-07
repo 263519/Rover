@@ -41,22 +41,22 @@ Scena::Scena() {
   Vector3D Skala(skala);
 
   double polozenie1[3] = {-100, 0, 0};
-  // double polozenie2[3] = {0, 100, 0};
+   double polozenie2[3] = {0, 100, 0};
   // double polozenie3[3] = {-35, -40, 0};
 
 
   Vector3D Polozenie1(polozenie1);
-  // Vector3D Polozenie2(polozenie2);
+  Vector3D Polozenie2(polozenie2);
   // Vector3D Polozenie3(polozenie3);
   
 
   // 135 315
   ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
                                               "FSRxpp", Kolor_JasnoNiebieski,
-                                              Skala, Polozenie1, 0, 10, 33));
-  // ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
-  //                                          "FSR", Kolor_JasnoNiebieski,
-  //                                          Skala, Polozenie2, 0, 10, 15));
+                                              Skala, Polozenie1, 0, 20, 33));
+  ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
+                                           "FSR", Kolor_JasnoNiebieski,
+                                           Skala, Polozenie2, 0, 10, 15));
 
   //    ObiektLista.push_back(make_shared<LazikSFR>("../bryly_wzorcowe/szescian3.dat",
   //                                          "FSRorza", Kolor_JasnoNiebieski,
@@ -270,7 +270,7 @@ void Scena::PlaceSample(){
 const char* names[] = {"Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace", "Henry", "Ivy", "Jack", "Katie", "Liam", "Mia", "Noah", "Olivia", "Patrick", "Quinn", "Ryan", "Samantha", "Tyler","Alice1", "Bob1", "Charlie1", "David1", "Emma1", "Frank1", "Grace1", "Henry1", "Ivy1", "Jack1", "Katie1", "Liam1", "Mia1", "Noah1", "Olivia1", "Patrick1", "Quinn1", "Ryan1", "Samantha1", "Tyler1"};
 
 
-for(int i = 0 ; i<40 ; i++){
+for(int i = 0 ; i<15 ; i++){
   double skala[3] = {20, 20, 10};
   Vector3D Skala(skala);
 
@@ -389,7 +389,7 @@ void Scena::Menu() {
 
 
 
-WybierzLazik(1);
+//WybierzLazik(1);
 
 
   while (t) {
