@@ -1,62 +1,62 @@
 [
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ObiektGeom.cpp.o -c /home/szylux/Desktop/Rover/src/ObiektGeom.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/main.dir/app/main.cpp.o -c /home/szylux/Desktop/Rover/app/main.cpp",
+  "file": "/home/szylux/Desktop/Rover/app/main.cpp"
+},
+{
+  "directory": "/home/szylux/Desktop/Rover/build",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ObiektGeom.cpp.o -c /home/szylux/Desktop/Rover/src/ObiektGeom.cpp",
   "file": "/home/szylux/Desktop/Rover/src/ObiektGeom.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o -c /home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o -c /home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp",
   "file": "/home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp",
   "file": "/home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Lazik.cpp.o -c /home/szylux/Desktop/Rover/src/Lazik.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Lazik.cpp.o -c /home/szylux/Desktop/Rover/src/Lazik.cpp",
   "file": "/home/szylux/Desktop/Rover/src/Lazik.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Scena.cpp.o -c /home/szylux/Desktop/Rover/src/Scena.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Scena.cpp.o -c /home/szylux/Desktop/Rover/src/Scena.cpp",
   "file": "/home/szylux/Desktop/Rover/src/Scena.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ObrysXY.cpp.o -c /home/szylux/Desktop/Rover/src/ObrysXY.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ObrysXY.cpp.o -c /home/szylux/Desktop/Rover/src/ObrysXY.cpp",
   "file": "/home/szylux/Desktop/Rover/src/ObrysXY.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o -c /home/szylux/Desktop/Rover/src/ProbkaRegolitu.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o -c /home/szylux/Desktop/Rover/src/ProbkaRegolitu.cpp",
   "file": "/home/szylux/Desktop/Rover/src/ProbkaRegolitu.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/LazikSFR.cpp.o -c /home/szylux/Desktop/Rover/src/LazikSFR.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/LazikSFR.cpp.o -c /home/szylux/Desktop/Rover/src/LazikSFR.cpp",
   "file": "/home/szylux/Desktop/Rover/src/LazikSFR.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o -c /home/szylux/Desktop/Rover/src/adjacency_list_graph.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o -c /home/szylux/Desktop/Rover/src/adjacency_list_graph.cpp",
   "file": "/home/szylux/Desktop/Rover/src/adjacency_list_graph.cpp"
 },
 {
   "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o -c /home/szylux/Desktop/Rover/src/adjacency_matrix_graph.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o -c /home/szylux/Desktop/Rover/src/adjacency_matrix_graph.cpp",
   "file": "/home/szylux/Desktop/Rover/src/adjacency_matrix_graph.cpp"
 },
 {
-  "directory": "/home/szylux/Desktop/Rover/build",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -I/home/szylux/Desktop/Rover/inc -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/main.dir/app/main.cpp.o -c /home/szylux/Desktop/Rover/app/main.cpp",
-  "file": "/home/szylux/Desktop/Rover/app/main.cpp"
-},
-{
   "directory": "/home/szylux/Desktop/Rover/build/tests",
-  "command": "/usr/bin/c++  -I/home/szylux/Desktop/Rover/build -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/main.cpp.o -c /home/szylux/Desktop/Rover/tests/main.cpp",
+  "command": "/usr/bin/c++   -I/home/szylux/Desktop/Rover/build  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/main.cpp.o -c /home/szylux/Desktop/Rover/tests/main.cpp",
   "file": "/home/szylux/Desktop/Rover/tests/main.cpp"
 }
 ]

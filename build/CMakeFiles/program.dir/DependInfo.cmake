@@ -1,23 +1,26 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/szylux/Desktop/Rover/src/Lazik.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/Lazik.cpp.o"
+  "/home/szylux/Desktop/Rover/src/LazikSFR.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/LazikSFR.cpp.o"
+  "/home/szylux/Desktop/Rover/src/ObiektGeom.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/ObiektGeom.cpp.o"
+  "/home/szylux/Desktop/Rover/src/ObrysXY.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/ObrysXY.cpp.o"
+  "/home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o"
+  "/home/szylux/Desktop/Rover/src/ProbkaRegolitu.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o"
+  "/home/szylux/Desktop/Rover/src/Scena.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/Scena.cpp.o"
+  "/home/szylux/Desktop/Rover/src/adjacency_list_graph.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o"
+  "/home/szylux/Desktop/Rover/src/adjacency_matrix_graph.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o"
+  "/home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp" "/home/szylux/Desktop/Rover/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/szylux/Desktop/Rover/src/Lazik.cpp" "CMakeFiles/program.dir/src/Lazik.cpp.o" "gcc" "CMakeFiles/program.dir/src/Lazik.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/LazikSFR.cpp" "CMakeFiles/program.dir/src/LazikSFR.cpp.o" "gcc" "CMakeFiles/program.dir/src/LazikSFR.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/ObiektGeom.cpp" "CMakeFiles/program.dir/src/ObiektGeom.cpp.o" "gcc" "CMakeFiles/program.dir/src/ObiektGeom.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/ObrysXY.cpp" "CMakeFiles/program.dir/src/ObrysXY.cpp.o" "gcc" "CMakeFiles/program.dir/src/ObrysXY.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/PowierzchniaMarsa.cpp" "CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o" "gcc" "CMakeFiles/program.dir/src/PowierzchniaMarsa.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/ProbkaRegolitu.cpp" "CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o" "gcc" "CMakeFiles/program.dir/src/ProbkaRegolitu.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/Scena.cpp" "CMakeFiles/program.dir/src/Scena.cpp.o" "gcc" "CMakeFiles/program.dir/src/Scena.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/adjacency_list_graph.cpp" "CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o" "gcc" "CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/adjacency_matrix_graph.cpp" "CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o" "gcc" "CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o.d"
-  "/home/szylux/Desktop/Rover/src/lacze_do_gnuplota.cpp" "CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o" "gcc" "CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "."
+  "../inc"
   )
 
 # Targets to which this target links.

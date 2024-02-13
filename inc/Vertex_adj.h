@@ -1,52 +1,35 @@
-//
-// Created by PRO on 12.05.2023.
-//
-
 #ifndef GRAPH_ALGORITHMS_VERTEX_ADJ_H
 #define GRAPH_ALGORITHMS_VERTEX_ADJ_H
 
-//#include "ADJ.h"
+#include <list>
 #include "Edge_adj.h"
 #include "Vertex.h"
 
+template<typename T>
+class Vertex_adj : public Vertex<T> {
+private:
+    T element;
+    std::list<Edge_adj<T>*> edges;
+    typename std::list<Edge_adj<T>*>::iterator pos;
 
-// #include "ADJ.h"
-
-class Vertex_adj : public Vertex {
-
-    int element;
-
-    std::list<Vertex_adj>::iterator position;
-
-        std::list<Edge_adj *> edges;
-        list<Edge_adj *>::iterator pos;
-
-  public:
-    explicit Vertex_adj(int ele) { element = ele;
-this->pos = edges.end();
-
+public:
+    explicit Vertex_adj(T ele) : element(ele) {
+        this->pos = edges.end();
     }
+
     virtual ~Vertex_adj() = default;
-    int Element_v() const { return element; }
-    void set_vertex_element(int ele) { element = ele; }
 
+    T Element_v() const override { return element; }
+    void set_vertex_element(T ele) { element = ele; }
 
-    list<Edge_adj*> list_Edge_adj() {return edges;}
-    void ADDEdge_adj(Edge_adj  *e) {
-            edges.push_back(e);
-            pos = --edges.end();
-
+    std::list<Edge_adj<T>*> list_Edge_adj() { return edges; }
+    void ADDEdge_adj(Edge_adj<T>* e) {
+        edges.push_back(e);
+        pos = --edges.end();
     }
-    //void set_Position_edge(list<Edge_adj*>::iterator p) { this->pos = p;}
-    typename std::list<Edge_adj*>::iterator Position_edge()  { return pos; }
 
-
-    typename std::list<Vertex_adj>::iterator Position()  { return position; }
-
-
-
-
-   void set_Position(list<Vertex_adj>::iterator p) { this->position = p;}
+    typename std::list<Edge_adj<T>*>::iterator Position_edge() { return pos; }
 
 };
+
 #endif // GRAPH_ALGORITHMS_VERTEX_ADJ_H
