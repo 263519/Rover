@@ -1,47 +1,45 @@
 #ifndef GRAPH_ALGORITHMS_EDGE_ADJ_H
 #define GRAPH_ALGORITHMS_EDGE_ADJ_H
-//#include "Vertex_adj.h"
+
+#include <list>
 #include "Edge.h"
 #include "Vertex.h"
-//#include "adjacency_list_graph.hpp"
 
-//#include "ADJ.h"
-class Edge_adj : public Edge {
-  protected:
-    int element;
-    Vertex* start;
-    Vertex* end;
-    std::list<Edge_adj>::iterator position;
-    list<Edge_adj *>::iterator pos_start;
-    list<Edge_adj *>::iterator pos_end;
+template<typename T>
+class Edge_adj : public Edge<T> {
+protected:
+    int element; // Changed to int
+    Vertex<T>* start;
+    Vertex<T>* end;
+    typename std::list<Edge_adj<T>>::iterator position;
+    typename std::list<Edge_adj<T>*>::iterator pos_start;
+    typename std::list<Edge_adj<T>*>::iterator pos_end;
 
-
-  public:
-
-    Edge_adj(int element, Vertex* start, Vertex* end, std::list<Edge_adj>::iterator position) {
+public:
+    Edge_adj(int element, Vertex<T>* start, Vertex<T>* end, typename std::list<Edge_adj<T>>::iterator position) {
         this->element = element;
         this->start = start;
         this->end = end;
         this->position = position;
-
     }
+
     virtual ~Edge_adj() {}
-    int Element_e() const { return element; }
-    void set_edge_element(int ele) { element = ele; }
 
-    Vertex* Start() const { return start; }
+    int Element_e() const { return element; } // Changed return type to int
+    void set_edge_element(int ele) { element = ele; } // Changed argument type to int
 
-    Vertex* End() const { return end; }
+    Vertex<T>* Start() const { return start; }
 
-    typename std::list<Edge_adj>::iterator Position()  { return position; }
-    void set_Position(list<Edge_adj>::iterator p) { this->position = p;}
+    Vertex<T>* End() const { return end; }
 
-    typename std::list<Edge_adj*>::iterator Position_start()  { return pos_start; }
-    void set_Position_start(list<Edge_adj*>::iterator pe) { this->pos_start = pe;}
-    typename std::list<Edge_adj*>::iterator Position_end()  { return pos_end; }
-    void set_Position_end(list<Edge_adj*>::iterator pen) { this->pos_end = pen;}
+    typename std::list<Edge_adj<T>>::iterator Position() { return position; }
+    void set_Position(typename std::list<Edge_adj<T>>::iterator p) { this->position = p; }
 
+    typename std::list<Edge_adj<T>*>::iterator Position_start() { return pos_start; }
+    void set_Position_start(typename std::list<Edge_adj<T>*>::iterator pe) { this->pos_start = pe; }
 
+    typename std::list<Edge_adj<T>*>::iterator Position_end() { return pos_end; }
+    void set_Position_end(typename std::list<Edge_adj<T>*>::iterator pen) { this->pos_end = pen; }
 };
 
 #endif // GRAPH_ALGORITHMS_EDGE_ADJ_H

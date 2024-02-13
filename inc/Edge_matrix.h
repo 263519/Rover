@@ -1,44 +1,36 @@
-//
-// Created by PRO on 12.05.2023.
-//
-
 #ifndef GRAPH_ALGORITHMS_EDGE_MATRIX_H
 #define GRAPH_ALGORITHMS_EDGE_MATRIX_H
-
 
 #include "Edge.h"
 #include "Vertex_matrix.h"
 
-class Edge_matrix : public Edge {
-  protected:
-    int element;
-    Vertex_matrix* start;
-    Vertex_matrix* end;
-    std::list<Edge_matrix>::iterator position;
+template<typename T>
+class Edge_matrix : public Edge<T> {
+protected:
+    int element; // Changed the type to int
+    Vertex_matrix<T>* start;
+    Vertex_matrix<T>* end;
+    typename std::list<Edge_matrix<T>>::iterator position;
 
-
-
-
-  public:
-
-    Edge_matrix(int element, Vertex_matrix* start, Vertex_matrix* end, std::list<Edge_matrix>::iterator position) {
+public:
+    Edge_matrix(int element, Vertex_matrix<T>* start, Vertex_matrix<T>* end, typename std::list<Edge_matrix<T>>::iterator position) {
         this->element = element;
         this->start = start;
         this->end = end;
         this->position = position;
     }
+
     // virtual ~Edge_adj() {}
-    int Element_e() const { return element; }
-    void set_edge_element(int ele) { element = ele; }
 
-    Vertex* Start() const { return dynamic_cast<Vertex*>(start); }
+    int Element_e() const { return element; } // Changed the return type to int
+    void set_edge_element(int ele) { element = ele; } // Changed the argument type to int
 
-    Vertex* End() const { return dynamic_cast<Vertex*>(end); }
+    Vertex<T>* Start() const { return dynamic_cast<Vertex<T>*>(start); }
 
-    typename std::list<Edge_matrix>::iterator Position()  { return position; }
-    void set_Position(list<Edge_matrix>::iterator p) { position = p;}
-    //typename std::list<Vertex_adj>::iterator Position_s()  { return adj; }
-    //typename std::list<Vertex_adj>::iterator Position_e()  { return e; }
+    Vertex<T>* End() const { return dynamic_cast<Vertex<T>*>(end); }
 
+    typename std::list<Edge_matrix<T>>::iterator Position() { return position; }
+    void set_Position(typename std::list<Edge_matrix<T>>::iterator p) { position = p; }
 };
+
 #endif // GRAPH_ALGORITHMS_EDGE_MATRIX_H
