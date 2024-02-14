@@ -111,8 +111,8 @@ climits
 -
 adjacency_list_graph.h
 ../inc/adjacency_list_graph.h
-adjacency_matrix_graph.h
-../inc/adjacency_matrix_graph.h
+adjacency_matrix_graph.hh
+../inc/adjacency_matrix_graph.hh
 
 ../inc/TypKolizji.hh
 
@@ -139,6 +139,8 @@ unordered_map
 -
 list
 -
+iostream
+-
 graph.hpp
 ../inc/graph.hpp
 Edge_adj.h
@@ -146,12 +148,14 @@ Edge_adj.h
 Vertex_adj.h
 ../inc/Vertex_adj.h
 
-../inc/adjacency_matrix_graph.h
+../inc/adjacency_matrix_graph.hh
 memory
 -
 vector
 -
 list
+-
+iostream
 -
 graph.hpp
 ../inc/graph.hpp

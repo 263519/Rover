@@ -8,9 +8,12 @@
 template<typename T>
 class Vertex_adj : public Vertex<T> {
 private:
-    T element;
-    std::list<Edge_adj<T>*> edges;
-    typename std::list<Edge_adj<T>*>::iterator pos;
+T element;
+
+    typename std::list<Vertex_adj<T>>::iterator position;
+
+       typename std::list<Edge_adj<T> *> edges;
+      typename  std::list<Edge_adj<T> *>::iterator pos;
 
 public:
     explicit Vertex_adj(T ele) : element(ele) {
@@ -28,7 +31,17 @@ public:
         pos = --edges.end();
     }
 
-    typename std::list<Edge_adj<T>*>::iterator Position_edge() { return pos; }
+   // typename std::list<Edge_adj<T>*>::iterator Position_edge() { return pos; }
+
+    typename std::list<Edge_adj<T>*>::iterator Position_edge()  { return pos; }
+
+
+    typename std::list<Vertex_adj<T>>::iterator Position()  { return position; }
+
+
+
+
+   void set_Position(typename std::list<Vertex_adj<T>>::iterator p) { this->position = p;}
 
 };
 

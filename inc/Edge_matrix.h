@@ -20,7 +20,7 @@ public:
         this->position = position;
     }
 
-    // virtual ~Edge_adj() {}
+     virtual ~Edge_matrix() {}
 
     int Element_e() const { return element; } // Changed the return type to int
     void set_edge_element(int ele) { element = ele; } // Changed the argument type to int
