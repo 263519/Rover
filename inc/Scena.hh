@@ -15,7 +15,7 @@
 #include <csignal>
 #include <climits>
 #include "adjacency_list_graph.h"
-#include "adjacency_matrix_graph.h"
+#include "adjacency_matrix_graph.hh"
 
 
 

@@ -20,7 +20,7 @@ CMakeFiles/main.dir/app/main.cpp.o
  ../inc/Vertex_adj.h
  ../inc/Vertex_matrix.h
  ../inc/adjacency_list_graph.h
- ../inc/adjacency_matrix_graph.h
+ ../inc/adjacency_matrix_graph.hh
  ../inc/graph.hpp
  ../inc/lacze_do_gnuplota.hh
  /home/szylux/Desktop/Rover/app/main.cpp

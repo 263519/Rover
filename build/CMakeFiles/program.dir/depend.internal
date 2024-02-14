@@ -65,25 +65,13 @@ CMakeFiles/program.dir/src/Scena.cpp.o
  ../inc/Vertex_adj.h
  ../inc/Vertex_matrix.h
  ../inc/adjacency_list_graph.h
- ../inc/adjacency_matrix_graph.h
+ ../inc/adjacency_matrix_graph.hh
  ../inc/graph.hpp
  ../inc/lacze_do_gnuplota.hh
  /home/szylux/Desktop/Rover/src/Scena.cpp
 CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o
- ../inc/Edge.h
- ../inc/Edge_adj.h
- ../inc/Vertex.h
- ../inc/Vertex_adj.h
- ../inc/adjacency_list_graph.h
- ../inc/graph.hpp
  /home/szylux/Desktop/Rover/src/adjacency_list_graph.cpp
 CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o
- ../inc/Edge.h
- ../inc/Edge_matrix.h
- ../inc/Vertex.h
- ../inc/Vertex_matrix.h
- ../inc/adjacency_matrix_graph.h
- ../inc/graph.hpp
  /home/szylux/Desktop/Rover/src/adjacency_matrix_graph.cpp
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
  ../inc/lacze_do_gnuplota.hh

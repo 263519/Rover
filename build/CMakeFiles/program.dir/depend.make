@@ -64,25 +64,13 @@ CMakeFiles/program.dir/src/Scena.cpp.o: ../inc/Vertex.h
 CMakeFiles/program.dir/src/Scena.cpp.o: ../inc/Vertex_adj.h
 CMakeFiles/program.dir/src/Scena.cpp.o: ../inc/Vertex_matrix.h
 CMakeFiles/program.dir/src/Scena.cpp.o: ../inc/adjacency_list_graph.h
-CMakeFiles/program.dir/src/Scena.cpp.o: ../inc/adjacency_matrix_graph.h
+CMakeFiles/program.dir/src/Scena.cpp.o: ../inc/adjacency_matrix_graph.hh
 CMakeFiles/program.dir/src/Scena.cpp.o: ../inc/graph.hpp
 CMakeFiles/program.dir/src/Scena.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/Scena.cpp.o: ../src/Scena.cpp
 
-CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o: ../inc/Edge.h
-CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o: ../inc/Edge_adj.h
-CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o: ../inc/Vertex.h
-CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o: ../inc/Vertex_adj.h
-CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o: ../inc/adjacency_list_graph.h
-CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o: ../inc/graph.hpp
 CMakeFiles/program.dir/src/adjacency_list_graph.cpp.o: ../src/adjacency_list_graph.cpp
 
-CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o: ../inc/Edge.h
-CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o: ../inc/Edge_matrix.h
-CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o: ../inc/Vertex.h
-CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o: ../inc/Vertex_matrix.h
-CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o: ../inc/adjacency_matrix_graph.h
-CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o: ../inc/graph.hpp
 CMakeFiles/program.dir/src/adjacency_matrix_graph.cpp.o: ../src/adjacency_matrix_graph.cpp
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../inc/lacze_do_gnuplota.hh

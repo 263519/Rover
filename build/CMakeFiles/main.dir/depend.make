@@ -19,7 +19,7 @@ CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vertex.h
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vertex_adj.h
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vertex_matrix.h
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/adjacency_list_graph.h
-CMakeFiles/main.dir/app/main.cpp.o: ../inc/adjacency_matrix_graph.h
+CMakeFiles/main.dir/app/main.cpp.o: ../inc/adjacency_matrix_graph.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/graph.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp

@@ -28,14 +28,20 @@ int main() {
 //     srand( time( NULL ) );
     //Scena s;
 
-AdjacencyMatrixGraph<int> e, e1;
-//AdjacencyListGraph<int> l, l2;
-e.new_matrix(10,10);
+AdjacencyMatrixGraph<int>  e1;
+
+AdjacencyListGraph<int> l, l2;
+//e.new_matrix(10,10);
 e1.new_matrix(10,10);
-// e1.insertEdge(e1.insertVertex(2),e1.insertVertex(8), 7);
-// e1.insertEdge(e1.insertVertex(8),e1.insertVertex(2), 5);
-// e1.insertEdge(e1.insertVertex(8),e1.insertVertex(7), 9);
-//e1.print();
+//e1.endVertices(2);
+ l.insertVertex(2);
+l.insertVertex(7);
+
+ //e1.insertEdge(a1,a2, 7);
+l.insertEdge(l.insertVertex(8),l.insertVertex(2), 5);
+ e1.insertEdge(e1.insertVertex(8),e1.insertVertex(7), 9);
+e1.print();
+l.print();
 cout<<"\n\n";
 //   auto v1 = e.insertVertex(1);
 //   auto v2 = e.insertVertex(2);

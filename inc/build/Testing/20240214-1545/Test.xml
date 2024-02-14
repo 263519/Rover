@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20240214-1545-Experimental"
+	Name="szylux"
+	Generator="ctest-3.16.3"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="9.4.0"
+	OSName="Linux"
+	Hostname="szylux"
+	OSRelease="5.15.0-94-generic"
+	OSVersion="#104~20.04.1-Ubuntu SMP Tue Jan 16 13:34:09 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="61"
+	ProcessorCacheSize="4096"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="15867"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2757.49"
+	>
+	<Testing>
+		<StartDateTime>Feb 14 16:45 CET</StartDateTime>
+		<StartTestTime>1707925554</StartTestTime>
+		<TestList/>
+		<EndDateTime>Feb 14 16:45 CET</EndDateTime>
+		<EndTestTime>1707925554</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
