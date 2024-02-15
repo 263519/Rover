@@ -26,30 +26,23 @@ using namespace std;
 
 int main() {
 //     srand( time( NULL ) );
-    //Scena s;
-
-AdjacencyMatrixGraph<int>  e1;
-
-AdjacencyListGraph<int> l, l2;
-//e.new_matrix(10,10);
-e1.new_matrix(10,10);
-//e1.endVertices(2);
- l.insertVertex(2);
-l.insertVertex(7);
-
- //e1.insertEdge(a1,a2, 7);
-l.insertEdge(l.insertVertex(8),l.insertVertex(2), 5);
- e1.insertEdge(e1.insertVertex(8),e1.insertVertex(7), 9);
-e1.print();
-l.print();
-cout<<"\n\n";
-//   auto v1 = e.insertVertex(1);
-//   auto v2 = e.insertVertex(2);
-//    e.insertEdge(v1,v2,7);
-    //e.insertEdge(v1,e.insertVertex(99),7);
+    Scena s;
+s.Menu();
+// AdjacencyListGraph<std::pair<int,int>>  l;
+// AdjacencyMatrixGraph<std::pair<int,int>>  e;
 
 
- // e.print();
+// cout<<"\n\n";
+// //   auto v1 = e.insertVertex(1);
+// //   auto v2 = e.insertVertex(2);
+// //    e.insertEdge(v1,v2,7);
+//     l.insertEdge(l.insertVertex({20,21}),l.insertVertex({19,20}),7);
+//         l.insertEdge(l.insertVertex({19,20}),l.insertVertex({20,21}),7);
+//     //e.insertEdge(e.insertVertex({20,21}),e.insertVertex({19,20}),7);
+
+
+//  l.print();
+ //e.print();
 
 //     //std::thread t1(accumulator_function1, std::ref(s)); // Pass Scena object by reference
  

@@ -5,8 +5,8 @@ template<typename T>
 class Edge {
 public:
     virtual ~Edge() {}
-    virtual T Element_e() const = 0;
-    virtual void set_edge_element(T ele) = 0;
+    virtual int Element_e() const = 0;
+    virtual void set_edge_element(int ele) = 0;
     virtual Vertex<T>* Start() const = 0;
     virtual Vertex<T>* End() const = 0;
 };

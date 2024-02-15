@@ -25,7 +25,7 @@ public:
 
     virtual ~Edge_adj() {}
 
-    int Element_e() const { return element; } // Changed return type to int
+    int Element_e() const { return element; } // Corrected return type to int
     void set_edge_element(int ele) { element = ele; } // Changed argument type to int
 
     Vertex<T>* Start() const { return start; }
