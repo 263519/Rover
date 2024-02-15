@@ -268,7 +268,7 @@ return it;
 
 void Scena::PlaceSample(){
 const char* names[] = {"Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace", "Henry", "Ivy", "Jack", "Katie", "Liam", "Mia", "Noah", "Olivia", "Patrick", "Quinn", "Ryan", "Samantha", "Tyler","Alice1", "Bob1", "Charlie1", "David1", "Emma1", "Frank1", "Grace1", "Henry1", "Ivy1", "Jack1", "Katie1", "Liam1", "Mia1", "Noah1", "Olivia1", "Patrick1", "Quinn1", "Ryan1", "Samantha1", "Tyler1"};
-
+AdjacencyListGraph<std::pair<int,int>>  l;
 
 for(int i = 0 ; i<15 ; i++){
   double skala[3] = {20, 20, 10};
@@ -278,7 +278,8 @@ for(int i = 0 ; i<15 ; i++){
   double y = rand() % 200;
   double polozenie[3] = {x-100, y-100, 0};
   Vector3D Polozenie(polozenie);
-
+  l.insertEdge(l.insertVertex({x,y}),l.insertVertex({0,0}),10);
+      
    ObiektLista.push_back(
       make_shared<ProbkaRegolitu>("../bryly_wzorcowe/szescian2.dat", names[i],
      
@@ -291,6 +292,8 @@ for(int i = 0 ; i<15 ; i++){
 //   }
 
   }
+
+  l.print();
 }
 
 
