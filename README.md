@@ -1,5 +1,6 @@
-![alt text]([https://github.com/263519/Micromouse/blob/master/MAZE.png](https://github.com/263519/Rover/blob/main/laziczki.png))
-![alt text]([https://github.com/263519/Micromouse/blob/master/MAZE.png](https://github.com/263519/Rover/blob/main/wybor.png))
+![alt text](https://github.com/263519/Rover/blob/main/laziczki.png)
+![alt text](https://github.com/263519/Rover/blob/main/wybor.png)
+
 
 ## Building
 
