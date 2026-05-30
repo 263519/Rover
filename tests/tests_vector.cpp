@@ -3,13 +3,13 @@
 #include "SMatrix.hh"
 #include <cmath>
 
-#define ROZNICA 1e-9
+#define DIFFERENCE 1e-9
 #define SIZE 5
 
 typedef SVector<double,5> Vector5D;
 typedef SMatrix<double,5> Matrix5D;
 
-Vector3D wypelnijRotX(Vector3D v, double theta) {
+Vector3D rotateX(Vector3D v, double theta) {
   Vector3D rotated;
   double tmp[3][3] = {
       {1, 0, 0}, {0, cos(theta), -sin(theta)}, {0, sin(theta), cos(theta)}};
@@ -18,7 +18,7 @@ Vector3D wypelnijRotX(Vector3D v, double theta) {
   return rotated;
 }
 
-Vector3D wypelnijRotY(Vector3D v, double theta) {
+Vector3D rotateY(Vector3D v, double theta) {
   Vector3D rotated;
   double tmp[3][3] = {
       {cos(theta), 0, sin(theta)}, {0, 1, 0}, {-sin(theta), 0, cos(theta)}};
@@ -27,7 +27,7 @@ Vector3D wypelnijRotY(Vector3D v, double theta) {
   return rotated;
 }
 
-Vector3D wypelnijRotZ(Vector3D v, double theta) {
+Vector3D rotateZ(Vector3D v, double theta) {
   Vector3D rotated;
   double tmp[3][3] = {
       {cos(theta), -sin(theta), 0}, {sin(theta), cos(theta), 0}, {0, 0, 1}};
@@ -44,7 +44,7 @@ TEST(Tests, Test_1_Gauss) {
  double argumentsM[][SIZE] = {{1, 8, 8, 9,1}, {2,2,3, 1.00, 2}, 
  {1,12,1, 1, 17}, {3,7,2, 4, 0},   {3,2,2, 0, 1}};
   Matrix5D tmpM2 = Matrix5D(argumentsM);
-  EXPECT_LT(abs(tmpM2.Gauss() -(-378)), ROZNICA); 
+  EXPECT_LT(abs(tmpM2.Gauss() -(-378)), DIFFERENCE); 
   std::cout<<tmpM2.Gauss()<<std::endl;
     std::cout<<tmpM2<<std::endl;
   //  wystapily problemy 
@@ -62,7 +62,7 @@ TEST(Tests, Test_2_Determinant) {
                                {3, 0, 0, 0, 0}};
   Matrix5D A = Matrix5D(argumentsM);
 
-  EXPECT_LT(abs(A.Gauss() - (3)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (3)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -74,7 +74,7 @@ TEST(Tests, Test_3_Determinant) {
                                {0, 1, 2, 4, 2},
                                {3, 2, 2, 3, 1}};
   Matrix5D A = Matrix5D(argumentsM);
-  EXPECT_LT(abs(A.Gauss() - (-139)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (-139)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -86,7 +86,7 @@ TEST(Tests, Test_4_Determinant) {
                                {3, 1, 2, 4, 0},
                                {0, 1, 0, 1, 0}};
   Matrix5D A = Matrix5D(argumentsM);
-  EXPECT_LT(abs(A.Gauss() - (-6)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (-6)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -99,7 +99,7 @@ TEST(Tests, Test_5_Determinant) {
                                {0, 1, 0, 1, 0}};
   Matrix5D A = Matrix5D(argumentsM);
 
-  EXPECT_LT(abs(A.Gauss() - (6)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (6)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -112,7 +112,7 @@ TEST(Tests, Test_6_Determinant) {
                                {0, 1, 0, 1, 0}};
   Matrix5D A = Matrix5D(argumentsM);
 
-  EXPECT_LT(abs(A.Gauss() - (-45)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (-45)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -125,7 +125,7 @@ TEST(Tests, Test_7_Determinant) {
                                {0, 8, 0, 1, 0}};
   Matrix5D A = Matrix5D(argumentsM);
 
-  EXPECT_LT(abs(A.Gauss() - (-395)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (-395)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -138,7 +138,7 @@ TEST(Tests, Test_8_Determinant) {
                                {77, 0, 0, 0, 0}};
   Matrix5D A = Matrix5D(argumentsM);
 
-  EXPECT_LT(abs(A.Gauss() - (10780)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (10780)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -151,7 +151,7 @@ TEST(Tests, Test_9_Determinant) {
                                {77, 0, 0, 0, 0}};
   Matrix5D A = Matrix5D(argumentsM);
 
-  EXPECT_LT(abs(A.Gauss() - (10780)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (10780)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -164,7 +164,7 @@ TEST(Tests, Test_10_Determinant) {
                                {77, 0, 4, 8, 0}};
   Matrix5D A = Matrix5D(argumentsM);
 
-  EXPECT_LT(abs(A.Gauss() - (-66288)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (-66288)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -177,7 +177,7 @@ TEST(Tests, Test_11_Determinant) {
                                {77, 0, 0, 11, 0}};
   Matrix5D A = Matrix5D(argumentsM);
 
-  EXPECT_LT(abs(A.Gauss() - (-528)), ROZNICA);
+  EXPECT_LT(abs(A.Gauss() - (-528)), DIFFERENCE);
   std::cout << A.Gauss() << std::endl;
   std::cout << A << std::endl;
 }
@@ -536,7 +536,7 @@ TEST(Tests, Test_25_Rotation_X_I) {
   double argumentsR[3] = {1, 0, 0};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotX(B, M_PI / 2), R);
+  EXPECT_EQ(rotateX(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_26_Rotation_X_II) {
@@ -546,7 +546,7 @@ TEST(Tests, Test_26_Rotation_X_II) {
   double argumentsR[3] = {0, 0, 1};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotX(B, M_PI / 2), R);
+  EXPECT_EQ(rotateX(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_27_Rotation_X_III) {
@@ -556,7 +556,7 @@ TEST(Tests, Test_27_Rotation_X_III) {
   double argumentsR[3] = {0, -1, 0};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotX(B, M_PI / 2), R);
+  EXPECT_EQ(rotateX(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_28_Rotation_Y_I) {
@@ -566,7 +566,7 @@ TEST(Tests, Test_28_Rotation_Y_I) {
   double argumentsR[3] = {1, 0, 0};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotX(B, M_PI / 2), R);
+  EXPECT_EQ(rotateX(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_29_Rotation_Y_II) {
@@ -576,7 +576,7 @@ TEST(Tests, Test_29_Rotation_Y_II) {
   double argumentsR[3] = {0, 1, 0};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotY(B, M_PI / 2), R);
+  EXPECT_EQ(rotateY(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_30_Rotation_Y_III) {
@@ -586,7 +586,7 @@ TEST(Tests, Test_30_Rotation_Y_III) {
   double argumentsR[3] = {1, 0, 0};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotY(B, M_PI / 2), R);
+  EXPECT_EQ(rotateY(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_31_Rotation_Z_I) {
@@ -596,7 +596,7 @@ TEST(Tests, Test_31_Rotation_Z_I) {
   double argumentsR[3] = {0, 1, 0};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotZ(B, M_PI / 2), R);
+  EXPECT_EQ(rotateZ(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_32_Rotation_Z_II) {
@@ -606,7 +606,7 @@ TEST(Tests, Test_32_Rotation_Z_II) {
   double argumentsR[3] = {-1, 0, 0};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotZ(B, M_PI / 2), R);
+  EXPECT_EQ(rotateZ(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_33_Rotation_Z_III) {
@@ -616,7 +616,7 @@ TEST(Tests, Test_33_Rotation_Z_III) {
   double argumentsR[3] = {0, 0, 1};
   Vector3D R = Vector3D(argumentsR);
 
-  EXPECT_EQ(wypelnijRotZ(B, M_PI / 2), R);
+  EXPECT_EQ(rotateZ(B, M_PI / 2), R);
 }
 
 TEST(Tests, Test_34_Wektor_bledu_I) {
@@ -635,7 +635,7 @@ TEST(Tests, Test_34_Wektor_bledu_I) {
 
   Vector5D X = A.Equation(A, B);
 
-  EXPECT_EQ(A.WBledu(A, X, B), R);
+  EXPECT_EQ(A.ErrorVector(A, X, B), R);
 }
 
 TEST(Tests, Test_35_Wektor_bledu_II) {
@@ -654,7 +654,7 @@ TEST(Tests, Test_35_Wektor_bledu_II) {
 
   Vector5D X = A.Equation(A, B);
 
-  EXPECT_EQ(A.WBledu(A, X, B), R);
+  EXPECT_EQ(A.ErrorVector(A, X, B), R);
 }
 
 TEST(Tests, Test_36_Wektor_bledu_III) {
@@ -673,7 +673,7 @@ TEST(Tests, Test_36_Wektor_bledu_III) {
 
   Vector5D X = A.Equation(A, B);
 
-  EXPECT_EQ(A.WBledu(A, X, B), R);
+  EXPECT_EQ(A.ErrorVector(A, X, B), R);
 }
 
 TEST(Tests, Test_37_Wektor_bledu_IV) {
@@ -692,6 +692,6 @@ TEST(Tests, Test_37_Wektor_bledu_IV) {
 
   Vector5D X = A.Equation(A, B);
 
-  EXPECT_EQ(A.WBledu(A, X, B), R);
+  EXPECT_EQ(A.ErrorVector(A, X, B), R);
 }
 

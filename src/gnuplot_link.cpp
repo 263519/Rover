@@ -14,7 +14,7 @@
 #pragma implementation
 #endif
 
-#include "lacze_do_gnuplota.hh"
+#include "gnuplot_link.hh"
 
 using namespace std;
 
@@ -35,7 +35,7 @@ using namespace std;
 namespace PzG {
 
 
- std::list<InfoPlikuDoRysowania>  LaczeDoGNUPlota::_InfoPlikow_Glb;
+ std::list<InfoPlikuDoRysowania>  GnuplotLink::_InfoPlikow_Glb;
 
 
 
@@ -73,7 +73,7 @@ namespace PzG {
 
 
  //============================================================================
- //_____________________ LaczeDoGNUPlota ______________________________________
+ //_____________________ GnuplotLink ______________________________________
 
 
 
@@ -82,7 +82,7 @@ namespace PzG {
   * Odszukuje strukturę zawierającą nazwę pliku, w którym powinny być zapisane
   * współrzędne punktów do rysunku odpowiedniej łamanej lub powierzchni (w zależności 
   * od wcześniejszego wyboru trybu rysowania - patrz metoda
-  * \link LaczeDoGNUPlota::ZmienTrybRys ZmienTrybRys()\endlink).
+  * \link GnuplotLink::ZmienTrybRys ZmienTrybRys()\endlink).
   * \param[in] sNazwaPliku - nazwa pliku, dla którego ma zostać odnaleziony obiekt
   *               zawierające dane określające sposób rysowania łamanej lub powierzchni.
   * \param[in] Dostep - decyduje o tym, czy dany plik będzie szukany wsród plików,
@@ -97,7 +97,7 @@ namespace PzG {
   *         w trybie tylko do odczytu. W przypadku przecinym zwracany jest 
   *         wskaźnik \p nullptr.
   */
- const InfoPlikuDoRysowania* LaczeDoGNUPlota::ZnajdzNazwePliku(
+ const InfoPlikuDoRysowania* GnuplotLink::ZnajdzNazwePliku(
 						    const char                 *sNazwaPliku,
                                                     TypDostepuDoZasobu          Dostep
 						 ) const
@@ -129,7 +129,7 @@ namespace PzG {
   * \retval true - gdy operacja powiodła się,
   * \retval false - w przypadku przeciwnym.
   */
-  bool LaczeDoGNUPlota::UsunNazwePliku(  const InfoPlikuDoRysowania*  wInfoPliku,
+  bool GnuplotLink::UsunNazwePliku(  const InfoPlikuDoRysowania*  wInfoPliku,
                                          TypDostepuDoZasobu           Dostep
 				      )
  {
@@ -153,7 +153,7 @@ namespace PzG {
   * \retval true - gdy operacja powiodła się,
   * \retval false - w przypadku przeciwnym.
   */
-  bool LaczeDoGNUPlota::UsunNazwePliku(
+  bool GnuplotLink::UsunNazwePliku(
 		       const char          *sNazwaPliku,
 		       TypDostepuDoZasobu   Dostep
 		     )
@@ -178,7 +178,7 @@ namespace PzG {
   * \retval true - gdy operacja powiodła się,
   * \retval false - w przypadku przeciwnym.
   */
-  bool LaczeDoGNUPlota::UsunNazwePliku( const std::string     &NazwaPliku,
+  bool GnuplotLink::UsunNazwePliku( const std::string     &NazwaPliku,
                                         TypDostepuDoZasobu     Dostep
 				      )
  {
@@ -228,17 +228,17 @@ namespace PzG {
 
   
   
- void LaczeDoGNUPlota::WyswietlajKomunikatyBledow( bool  WyswietlajKomunikaty )
+ void GnuplotLink::WyswietlajKomunikatyBledow( bool  WyswietlajKomunikaty )
  {
   _WyswietlajKomunikatyOBledach =  WyswietlajKomunikaty;
  }
 
 
-  LaczeDoGNUPlota::~LaczeDoGNUPlota() 
+  GnuplotLink::~GnuplotLink() 
   {}
 
 
- bool LaczeDoGNUPlota::PrzeslijDoGNUPlota(const char *Komunikat)
+ bool GnuplotLink::PrzeslijDoGNUPlota(const char *Komunikat)
  {
   int Ilosc = strlen(Komunikat);
   int IloscPrzeslanych;
@@ -258,7 +258,7 @@ namespace PzG {
 
 
 
- LaczeDoGNUPlota::LaczeDoGNUPlota() 
+ GnuplotLink::GnuplotLink() 
  { 
    _PokazOs_OX = _PokazOs_OY = true;
 
@@ -310,7 +310,7 @@ namespace PzG {
  //            NazwaPliku. Zadne dodatkowe dzialanie nie jest realizowane.
  //
 /*
- bool LaczeDoGNUPlota::DodajNazwePliku( const char      * NazwaPliku,
+ bool GnuplotLink::DodajNazwePliku( const char      * NazwaPliku,
                                         TypSposobRysoowania   SposobRys,
                                         int               Szerokosc
                                       )
@@ -329,7 +329,7 @@ namespace PzG {
  }
 */
 
- InfoPlikuDoRysowania&  LaczeDoGNUPlota::DodajNazwePliku(
+ InfoPlikuDoRysowania&  GnuplotLink::DodajNazwePliku(
                                     const char         *NazwaPliku,
                                     bool                SprawdzIstnienie,
                                     TypDostepuDoZasobu  Dostep
@@ -354,7 +354,7 @@ namespace PzG {
 /*!
  *
  */
- InfoPlikuDoRysowania& LaczeDoGNUPlota::DodajNazwePliku_PunktyRoznejWielkosci(
+ InfoPlikuDoRysowania& GnuplotLink::DodajNazwePliku_PunktyRoznejWielkosci(
                                                const char         *NazwaPliku,
                                                bool                SprawdzIstnienie,
                                                TypDostepuDoZasobu  Dostep
@@ -381,7 +381,7 @@ namespace PzG {
 /*!
  *
  */
- InfoPlikuDoRysowania& LaczeDoGNUPlota::DodajNazwePliku_Lamana(
+ InfoPlikuDoRysowania& GnuplotLink::DodajNazwePliku_Lamana(
                                           const char         *NazwaPliku,
                                           bool                SprawdzIstnienie,
                                           TypDostepuDoZasobu  Dostep
@@ -396,7 +396,7 @@ namespace PzG {
 /*!
  *
  */
- InfoPlikuDoRysowania& LaczeDoGNUPlota::DodajNazwePliku_JednakowePunkty(
+ InfoPlikuDoRysowania& GnuplotLink::DodajNazwePliku_JednakowePunkty(
                                             const char         *NazwaPliku,
                                             bool                SprawdzIstnienie,
                                             TypDostepuDoZasobu  Dostep
@@ -410,13 +410,13 @@ namespace PzG {
  //-------------------------------------------------------------------------
  // Informuje, czy połączenie z programem gnuplot zostało zainicjowane.
  // 
- bool LaczeDoGNUPlota::CzyPolaczenieJestZainicjowane() const
+ bool GnuplotLink::CzyPolaczenieJestZainicjowane() const
  {
   return _Wejscie_GNUPlota > -1 && _Wyjscie_GNUPlota > -1;
  }
 
 
- void LaczeDoGNUPlota::KomunikatBledu(const char *Komunikat) const
+ void GnuplotLink::KomunikatBledu(const char *Komunikat) const
  {
   if (!CzyWyswietlacKomunikaty()) return;
   cerr << Komunikat << endl;
@@ -427,7 +427,7 @@ namespace PzG {
 
 
 
- bool LaczeDoGNUPlota::Inicjalizuj()
+ bool GnuplotLink::Inicjalizuj()
  {
   if (CzyPolaczenieJestZainicjowane()) return true;
   if (!UtworzProcesPotomny()) return false;
@@ -448,7 +448,7 @@ namespace PzG {
  *  \retval false - gdy proces inicjalizacji połączenia zakończył się
  *               niepowodzeniem.
  */
- bool LaczeDoGNUPlota::UtworzProcesPotomny()
+ bool GnuplotLink::UtworzProcesPotomny()
  {
   int indesk[2],outdesk[2];
 
@@ -530,7 +530,7 @@ namespace PzG {
 
 
 
- bool LaczeDoGNUPlota::RysujDoPliku(const char *NazwaPliku)
+ bool GnuplotLink::RysujDoPliku(const char *NazwaPliku)
  {
   if (!CzyPolaczenieJestZainicjowane()) {
     if (!Inicjalizuj()) return false;
@@ -630,7 +630,7 @@ namespace PzG {
  *  współrzędne wierzchołków zawarte są w plikach.
  *  Nazwy tych plików muszą być wcześniej dołączone do kolejki 
  *  plików poprzez zastosowanie polecenia
- *   \link LaczeDoGNUPlota::DodajNazwePliku DodajNazwePliku()\endlink.
+ *   \link GnuplotLink::DodajNazwePliku DodajNazwePliku()\endlink.
  *  
  * \param[in,out] Polecenie - dopisywana jest do niego sekwencja znaków
  *                  tworzących parametry dla polecenia \e plot.
@@ -643,7 +643,7 @@ namespace PzG {
  * \post Jeżeli  lista nazw plików nie jest pusta, to poprzez
  *              parametr \e Sep zostaje udostępniony łańcuch: ", ".
  */
- bool LaczeDoGNUPlota::DopiszRysowanieZPlikow( std::string   &Polecenie, 
+ bool GnuplotLink::DopiszRysowanieZPlikow( std::string   &Polecenie, 
                                                 char const  **wwSep 
                                              )
  {
@@ -1347,7 +1347,7 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
  *  współrzędne wierzchołków zawarte są w plikach.
  *  Nazwy tych plików muszą być wcześniej dołączone do listy
  *  plików poprzez zastosowanie polecenia
- *   \link LaczeDoGNUPlota::DodajNazwePliku DodajNazwePliku()\endlink.
+ *   \link GnuplotLink::DodajNazwePliku DodajNazwePliku()\endlink.
  *  
  * \param[in,out] Polecenie - dopisywana jest do niego sekwencja znaków
  *                  tworzących parametry dla polecenia \e plot.
@@ -1360,7 +1360,7 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
  * \post Jeżeli  lista nazw plików nie jest pusta, to poprzez
  *              parametr \e Sep zostaje udostępniony łańcuch: ", ".
  */
- bool LaczeDoGNUPlota::DopiszRysowanieZRoznychPunktow( 
+ bool GnuplotLink::DopiszRysowanieZRoznychPunktow( 
                                                 std::string  &Polecenie, 
                                                 char const   *Sep 
                                              )
@@ -1390,21 +1390,21 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
 
 
 
- void LaczeDoGNUPlota::UstawRotacjeX( float KatX_st )
+ void GnuplotLink::UstawRotacjeX( float KatX_st )
  {
    _Xrotacja = KatX_st;
    _Preambula_RotacjaSkala = ZapiszUstawienieRotacjiISkali();
  }
   
 
- void LaczeDoGNUPlota::UstawRotacjeZ( float KatZ_st )
+ void GnuplotLink::UstawRotacjeZ( float KatZ_st )
  {
    _Zrotacja = KatZ_st;
    _Preambula_RotacjaSkala = ZapiszUstawienieRotacjiISkali();
  }
 
 
- void LaczeDoGNUPlota::UstawRotacjeXZ( float KatX_st, float KatZ_st )
+ void GnuplotLink::UstawRotacjeXZ( float KatX_st, float KatZ_st )
  {
    _Xrotacja = KatX_st;  _Zrotacja = KatZ_st;
    _Preambula_RotacjaSkala = ZapiszUstawienieRotacjiISkali();
@@ -1412,21 +1412,21 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
 
 
 
- void LaczeDoGNUPlota::UstawSkaleX( float skala_x )
+ void GnuplotLink::UstawSkaleX( float skala_x )
  {
    _Xskala = skala_x;
    _Preambula_RotacjaSkala = ZapiszUstawienieRotacjiISkali();
  }
 
 
- void LaczeDoGNUPlota::UstawSkaleZ( float skala_z )
+ void GnuplotLink::UstawSkaleZ( float skala_z )
  {
    _Zskala = skala_z;
    _Preambula_RotacjaSkala = ZapiszUstawienieRotacjiISkali();
  }
 
 
- void LaczeDoGNUPlota::UstawSkaleXZ( float skala_x, float skala_z )
+ void GnuplotLink::UstawSkaleXZ( float skala_x, float skala_z )
  {
    _Xskala = skala_x;  _Zskala = skala_z;
    _Preambula_RotacjaSkala = ZapiszUstawienieRotacjiISkali();
@@ -1448,7 +1448,7 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
  //       false   - gdy połączenie z gnuplotem nie moze zostac poprawnie
  //                 zainicjalizowane lub gdy lista plikow jest pusta.
  //
- bool LaczeDoGNUPlota::Rysuj()
+ bool GnuplotLink::Rysuj()
  {
   if (!CzyPolaczenieJestZainicjowane()) {
     if (!Inicjalizuj()) return false;
@@ -1479,7 +1479,7 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
 
 
 
- void  LaczeDoGNUPlota::BudujPreambulePoleceniaRysowania(std::string &Preambula)
+ void  GnuplotLink::BudujPreambulePoleceniaRysowania(std::string &Preambula)
  {
   switch (_TrybRys) {
    case TR_2D: BudujPreambule_2D(Preambula); break;
@@ -1489,7 +1489,7 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
 
 
 
- void  LaczeDoGNUPlota::BudujPreambule_2D(std::string &Preambula)
+ void  GnuplotLink::BudujPreambule_2D(std::string &Preambula)
  {
   Preambula.clear();
   Preambula.reserve(1000);
@@ -1509,7 +1509,7 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
 
 
 
- void  LaczeDoGNUPlota::BudujPreambule_3D(std::string &Preambula)
+ void  GnuplotLink::BudujPreambule_3D(std::string &Preambula)
  {
   Preambula.clear();
   Preambula.reserve(1000);
@@ -1538,7 +1538,7 @@ InfoPunktyDoRysowania& InfoPunktyDoRysowania::ZmienPrzesEtykiety_WzgRozmPunktu(
 
 
 
-std::string LaczeDoGNUPlota::ZapiszUstawienieZakresu(char Os) const
+std::string GnuplotLink::ZapiszUstawienieZakresu(char Os) const
 {
   ostringstream strm;
   float Min, Max;
@@ -1557,7 +1557,7 @@ std::string LaczeDoGNUPlota::ZapiszUstawienieZakresu(char Os) const
 
 
 
-std::string LaczeDoGNUPlota::ZapiszUstawienieRotacjiISkali() const
+std::string GnuplotLink::ZapiszUstawienieRotacjiISkali() const
 {
   ostringstream strm;
   strm << "set view " << RotacjaX() << "," << RotacjaZ() 
@@ -1585,7 +1585,7 @@ std::string LaczeDoGNUPlota::ZapiszUstawienieRotacjiISkali() const
  //-------------------------------------------------------------------------
  //  Metda usuwa ostatnia nazwe z listy nazw plikow.
  //
- void LaczeDoGNUPlota::UsunOstatniaNazwe_ListaLokalna()
+ void GnuplotLink::UsunOstatniaNazwe_ListaLokalna()
  {
    PzG::UsunOstatniaNazwePliku(_InfoPlikow_Lok);
  }
@@ -1594,7 +1594,7 @@ std::string LaczeDoGNUPlota::ZapiszUstawienieRotacjiISkali() const
  //-------------------------------------------------------------------------
  //  Metda usuwa ostatnia nazwe z listy nazw plikow.
  //
- void LaczeDoGNUPlota::UsunOstatniaNazwe_ListaGlobalna()
+ void GnuplotLink::UsunOstatniaNazwe_ListaGlobalna()
  {
    PzG::UsunOstatniaNazwePliku(_InfoPlikow_Glb);
  }
@@ -1604,13 +1604,13 @@ std::string LaczeDoGNUPlota::ZapiszUstawienieRotacjiISkali() const
  //-------------------------------------------------------------------------
  //  Metda calkowicie kasuje zawartosc listy nazw plikow.
  //
- void LaczeDoGNUPlota::UsunWszystkieNazwyPlikow()
+ void GnuplotLink::UsunWszystkieNazwyPlikow()
  {
   _InfoPlikow_Lok.clear();
   _InfoPlikow_Glb.clear();
  }
 
- //_____________________ LaczeDoGNUPlota ______________________________________
+ //_____________________ GnuplotLink ______________________________________
  //============================================================================
 
 

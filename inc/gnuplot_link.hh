@@ -9,7 +9,7 @@
 #endif
 
 /*!
- * \file  lacze_do_gnuplota.hh
+ * \file  gnuplot_link.hh
  *  
  *  Plik zawiera definicję klasy realizującej interfejs
  *  komunikacyjny do programu gnuplot.
@@ -328,7 +328,7 @@ namespace PzG {
  * Każdy taki zbiór może być następnie wizualizowany przez program 
  * gnuplot w postaci oddzielnych płaszczyzn z wycinaniem części zasłanianych.
  */
-class LaczeDoGNUPlota {
+class GnuplotLink {
  protected:
   /*!
    * \brief Lista nazw plików z danymi dla \e gnuplota.
@@ -337,7 +337,7 @@ class LaczeDoGNUPlota {
    * dane dotyczące rysowania obrysu brył przez program \e gnuplot.
    * Operacja ta wykonywana jest po wywołaniu polecenia. Pole to jest
    * wspólne dla wszystkich łączy.
-   * \link LaczeDoGNUPlota::Rysuj Rysuj\endlink.
+   * \link GnuplotLink::Rysuj Rysuj\endlink.
    */
   static std::list<InfoPlikuDoRysowania>  _InfoPlikow_Glb;
   /*!
@@ -347,7 +347,7 @@ class LaczeDoGNUPlota {
    * dane dotyczące rysowania obrysu brył przez program \e gnuplot.
    * Operacja ta wykonywana jest po wywołaniu polecenia. Pole to jest
    * indywidulane dla danego łącza.
-   * \link LaczeDoGNUPlota::Rysuj Rysuj\endlink.
+   * \link GnuplotLink::Rysuj Rysuj\endlink.
    */
   std::list<InfoPlikuDoRysowania>  _InfoPlikow_Lok;
 
@@ -391,7 +391,7 @@ class LaczeDoGNUPlota {
    * wymuszony na programie \p gnuplot poprzez wysłanie do niego
    * odpowiednich poleceń. Wspomniane wymuszenie jest realizowane
    * poprzez wywołanie polecenia 
-   * \link LaczeDoGNUPlota::Rysuj Rysuj()\endlink
+   * \link GnuplotLink::Rysuj Rysuj()\endlink
    */
   TypTrybuRysowania  _TrybRys;
    /*!
@@ -534,7 +534,7 @@ class LaczeDoGNUPlota {
    * \brief  Udostępnia informację czy mają być wyświetlane informacje o błędach.
    *
    *  Udostępnia wartość pola
-   *  \link LaczeDoGNUPlota::_WyswietlajKomunikatyOBledach
+   *  \link GnuplotLink::_WyswietlajKomunikatyOBledach
    *            _WyswietlajKomunikatyOBledach\endlink.
    *  Określa ono, czy mają być wyświetlane komunikaty o błędach na wyjście
    *  standardowe, czy też nie.
@@ -555,7 +555,7 @@ class LaczeDoGNUPlota {
    *
    * Wyświetla na wyjście "standard error" komunikat (przekazany jako
    * parametr), o ile pole 
-   *   \link LaczeDoGNUPlota::_WyswietlajKomunikatyOBledach
+   *   \link GnuplotLink::_WyswietlajKomunikatyOBledach
    *          _WyswietlajKomunikatyOBledach\endlink  ma wartość
    * \p true. W przypadku przeciwnym komunikat nie jest wyświetlany.
    * \param[in] sKomunikat - treść komunikatu, który ma być wyświetlony.
@@ -998,7 +998,7 @@ class LaczeDoGNUPlota {
     * Odszukuje strukturę zawierającą nazwę pliku, w którym powinny być zapisane
     * współrzędne punktów do rysunku odpowiedniej łamanej lub powierzchni (w zależności 
     * od wcześniejszego wyboru trybu rysowania - patrz metoda
-    * \link LaczeDoGNUPlota::ZmienTrybRys ZmienTrybRys()\endlink).
+    * \link GnuplotLink::ZmienTrybRys ZmienTrybRys()\endlink).
     * \param[in]  NazwaPliku - nazwa pliku, dla którego ma zostać odnaleziony obiekt
     *               zawierające dane określające sposób rysowania łamanej lub powierzchni.
     * \param[in] Dostep - decyduje o tym, czy dany plik będzie szukany wsród plików,
@@ -1025,7 +1025,7 @@ class LaczeDoGNUPlota {
     * Odszukuje strukturę zawierającą nazwę pliku, w którym powinny być zapisane
     * współrzędne punktów do rysunku odpowiedniej łamanej lub powierzchni (w zależności 
     * od wcześniejszego wyboru trybu rysowania - patrz metoda
-    * \link LaczeDoGNUPlota::ZmienTrybRys ZmienTrybRys()\endlink).
+    * \link GnuplotLink::ZmienTrybRys ZmienTrybRys()\endlink).
     * \param[in] sNazwaPliku - nazwa pliku, dla którego ma zostać odnaleziony obiekt
     *               zawierające dane określające sposób rysowania łamanej lub powierzchni.
     * \param[in] Dostep - decyduje o tym, czy dany plik będzie szukany wsród plików,
@@ -1044,7 +1044,7 @@ class LaczeDoGNUPlota {
 					   TypDostepuDoZasobu   Dostep = DZ_Lokalny
 				        )
      {  return const_cast< InfoPlikuDoRysowania*>(
-		 const_cast<const LaczeDoGNUPlota*>(this)->ZnajdzNazwePliku(sNazwaPliku,Dostep)
+		 const_cast<const GnuplotLink*>(this)->ZnajdzNazwePliku(sNazwaPliku,Dostep)
 	       );
      }
 
@@ -1054,7 +1054,7 @@ class LaczeDoGNUPlota {
     * Odszukuje strukturę zawierającą nazwę pliku, w którym powinny być zapisane
     * współrzędne punktów do rysunku odpowiedniej łamanej lub powierzchni (w zależności 
     * od wcześniejszego wyboru trybu rysowania - patrz metoda
-    * \link LaczeDoGNUPlota::ZmienTrybRys ZmienTrybRys()\endlink).
+    * \link GnuplotLink::ZmienTrybRys ZmienTrybRys()\endlink).
     * \param[in]  NazwaPliku - nazwa pliku, dla którego ma zostać odnaleziony obiekt
     *               zawierające dane określające sposób rysowania łamanej lub powierzchni.
     * \param[in] Dostep - decyduje o tym, czy dany plik będzie szukany wsród plików,
@@ -1129,7 +1129,7 @@ class LaczeDoGNUPlota {
    *
    *  \pre  Lista plików nie powinna być pusta. Nazwy plików na niej
    *        można umieścić za pomoca metody 
-   *        \link LaczeDoGNUPlota::DodajNazwePliku DodajNazwePliku\endlink
+   *        \link GnuplotLink::DodajNazwePliku DodajNazwePliku\endlink
    *        jak też innych tego typu metod.
    *        Metoda nie wymaga wcześniejszego zainicjowania połączenia
    *        z \e gnuplotem.
@@ -1144,7 +1144,7 @@ class LaczeDoGNUPlota {
    * \brief Generuje polecenie rysowania do pliku i przesyła je do gnuplota
    *
    *  Działa analogicznie jak metoda 
-   *  \link LaczeDoGNUPlota::Rysuj Rysuj\endlink, z tą różnicą, że 
+   *  \link GnuplotLink::Rysuj Rysuj\endlink, z tą różnicą, że 
    *  rysunek robota
    *  składowany jest w pliku o nazwie przekazanej przez parametr 
    *  \e NazwaPliku.
@@ -1208,12 +1208,12 @@ class LaczeDoGNUPlota {
    */
   void UsunWszystkieNazwyPlikow();
 
-  LaczeDoGNUPlota();
-  virtual ~LaczeDoGNUPlota();
+  GnuplotLink();
+  virtual ~GnuplotLink();
 };
 
   inline
-  bool LaczeDoGNUPlota::DopiszPlikiDoPoleceniaRysowania( std::string &,
+  bool GnuplotLink::DopiszPlikiDoPoleceniaRysowania( std::string &,
                                                          char const  **
                                                        )
   { return false; }

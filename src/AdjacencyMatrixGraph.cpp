@@ -1,10 +1,10 @@
-// #include "adjacency_matrix_graph.hh"
+// #include "AdjacencyMatrixGraph.hh"
 // #include <memory>
 // template<typename T> 
 // void AdjacencyMatrixGraph<T>::xd(){
 //     std::cout<<"Co jest\n";
 // }
-
+// 
 // template<typename T> 
 // Vertex<T>* AdjacencyMatrixGraph<T>::insertVertex(T ve) {
 //     for (auto& vertex : v_list) {
@@ -12,32 +12,32 @@
 //             return &vertex;
 //         }
 //     }
-
-//     Vertex_matrix<T> ver(ve);
+// 
+//     VertexMatrix<T> ver(ve);
 //     v_list.push_back(ver);
 //     v_list.back().set_key(pos);
 //     v_list.back().set_Position(--v_list.end());
 //     ++pos;
 //     return &v_list.back();
 // }
-
+// 
 // template<typename T> 
 // Edge<T>* AdjacencyMatrixGraph<T>::insertEdge(Vertex<T>* v1, Vertex<T>* v2, int e) {
-//     Vertex_matrix<T>* start = dynamic_cast<Vertex_matrix<T>*>(v1);
-//     Vertex_matrix<T>* end = dynamic_cast<Vertex_matrix<T>*>(v2);
-//     Edge_matrix<T> edge(e, start, end, --e_list.end());
+//     VertexMatrix<T>* start = dynamic_cast<VertexMatrix<T>*>(v1);
+//     VertexMatrix<T>* end = dynamic_cast<VertexMatrix<T>*>(v2);
+//     EdgeMatrix<T> edge(e, start, end, --e_list.end());
 //     e_list.push_back(edge);
 //     adjacency_matrix[start->Key()][end->Key()] = &e_list.back();
 //     return &e_list.back();
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::insertEdge_int(T v, T w, int o) {
 //     Vertex<T>* start = insertVertex(v);
 //     Vertex<T>* end = insertVertex(w);
 //     insertEdge(start, end, o);
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::endVertices(int o) {
 //     for (auto& edge : e_list) {
@@ -46,19 +46,19 @@
 //         }
 //     }
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::endVertices(Edge<T>* e) {
 //     std::cout << e->Start()->Element_v() << " -> " << e->End()->Element_v() << std::endl;
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::areAdjacent(Vertex<T>* v, Vertex<T>* w) {
-//     Vertex_matrix<T>* start = dynamic_cast<Vertex_matrix<T>*>(v);
-//     Vertex_matrix<T>* end = dynamic_cast<Vertex_matrix<T>*>(w);
+//     VertexMatrix<T>* start = dynamic_cast<VertexMatrix<T>*>(v);
+//     VertexMatrix<T>* end = dynamic_cast<VertexMatrix<T>*>(w);
 //     std::cout << "Are adjacent: " << (adjacency_matrix[start->Key()][end->Key()] != nullptr) << std::endl;
 // }
-
+// 
 // template<typename T>
 // Vertex<T>* AdjacencyMatrixGraph<T>::opposite(Vertex<T>* v, Edge<T>* e) {
 //     if (v == e->End()) {
@@ -70,20 +70,20 @@
 //         return nullptr;
 //     }
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::replace(Vertex<T>* v, T x) {
 //     v->set_vertex_element(x);
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::replace(Edge<T>* v, int x) {
 //     v->set_edge_element(x);
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::removeVertex(Vertex<T>* v) {
-//     Vertex_matrix<T>* vertex = dynamic_cast<Vertex_matrix<T>*>(v);
+//     VertexMatrix<T>* vertex = dynamic_cast<VertexMatrix<T>*>(v);
 //     for (auto edge : adjacency_matrix[vertex->Key()]) {
 //         if (edge) {
 //             removeEdge(edge);
@@ -92,21 +92,21 @@
 //     adjacency_matrix.erase(adjacency_matrix.begin() + vertex->Key());
 //     v_list.erase(vertex->Position());
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::removeEdge(Edge<T>* e) {
-//     Edge_matrix<T>* edge = dynamic_cast<Edge_matrix<T>*>(e);
+//     EdgeMatrix<T>* edge = dynamic_cast<EdgeMatrix<T>*>(e);
 //     e_list.erase(edge->Position());
-//     Vertex_matrix<T>* start = dynamic_cast<Vertex_matrix<T>*>(edge->Start());
-//     Vertex_matrix<T>* end = dynamic_cast<Vertex_matrix<T>*>(edge->End());
+//     VertexMatrix<T>* start = dynamic_cast<VertexMatrix<T>*>(edge->Start());
+//     VertexMatrix<T>* end = dynamic_cast<VertexMatrix<T>*>(edge->End());
 //     adjacency_matrix[start->Key()][end->Key()] = nullptr;
 //     adjacency_matrix[end->Key()][start->Key()] = nullptr;
 // }
-
+// 
 // template<typename T>
 // std::vector<Edge<T>*> AdjacencyMatrixGraph<T>::incidentEdges(Vertex<T>* v) {
 //     std::vector<Edge<T>*> incidentE;
-//     Vertex_matrix<T>* startVertex = dynamic_cast<Vertex_matrix<T>*>(v);
+//     VertexMatrix<T>* startVertex = dynamic_cast<VertexMatrix<T>*>(v);
 //     for (const auto& x : adjacency_matrix[startVertex->Key()]) {
 //         if (x) {
 //             incidentE.push_back(x);
@@ -114,7 +114,7 @@
 //     }
 //     return incidentE;
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::vertices() {
 //     std::cout << "Vertices : ";
@@ -123,7 +123,7 @@
 //     }
 //     std::cout << std::endl;
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::edges() {
 //     for (const auto& edge : e_list) {
@@ -132,7 +132,7 @@
 //         std::cout << "  " << edge.End()->Element_v() << std::endl;
 //     }
 // }
-
+// 
 // template<typename T>
 // void AdjacencyMatrixGraph<T>::print() {
 //     for (const auto& row : adjacency_matrix) {
@@ -146,7 +146,7 @@
 //         std::cout << std::endl;
 //     }
 // }
-
+// 
 // template<typename T>
 // std::unique_ptr<Graph<T>> AdjacencyMatrixGraph<T>::createGraph(std::istream& is) {
 //     int num_vertices, num_edges;

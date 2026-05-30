@@ -1,6 +1,7 @@
+#pragma once
 #include <cmath>
 #include <iostream>
-
+#include "SVector.hh"
 
 template <typename Type, int Size> class SMatrix {
 private:
@@ -8,61 +9,45 @@ private:
 
 public:
   SMatrix();
-  SMatrix(Type[Size][Size]); // Konstruktor klasy
+  SMatrix(Type[Size][Size]); // Class constructor
 
-  SVector<Type, Size> operator*(SVector<Type, Size> tmp); // Operator mnożenia przez wektor
+  SVector<Type, Size> operator*(SVector<Type, Size> tmp); // Operator for multiplication by vector
+  SMatrix<Type, Size> operator*(SMatrix<Type, Size> tmp); // Operator for multiplication by matrix
+  SMatrix<Type, Size> operator+(SMatrix<Type, Size> tmp); // Operator for addition of matrices
 
-    SMatrix<Type,Size> operator * (SMatrix<Type,Size> tmp);           // Operator mnożenia przez macierz
+  SMatrix<Type, Size> Transpose(); // Transposes matrix
+  Type Gauss(); // Calculates determinant using Gaussian elimination
 
-  SMatrix<Type, Size> operator+(SMatrix<Type, Size> tmp);
+  SMatrix<Type, Size> ColumnChange(int column, SVector<Type, Size> vec); // Replaces a column
+  SMatrix<Type, Size> RowChange(int row1, int row2); // Swaps two rows
+  SMatrix<Type, Size> Changing(int row); // Swaps appropriate rows using RowChange()
 
-  SMatrix<Type, Size> Transpose(); //  transposes matix
+  SVector<Type, Size> Equation(SMatrix<Type, Size> A, SVector<Type, Size> B); // Solves system of linear equations
+  SMatrix<Type, Size> SwapColumns(unsigned int column);
+  SMatrix<Type, Size> ZeroColumn(unsigned int column);
 
-  Type Gauss(); //  calculte det
-
-  SMatrix<Type, Size> ColumnChange(int column,
-                                   SVector<Type, Size> vec); //  changes column
-
-  SMatrix<Type, Size> RowChange(int row1, int row2); // changes 2 rows
-
-  SMatrix<Type, Size>
-  Changing(int row); // changes appropriate rows using RowChange()
-
-  SVector<Type, Size>  Equation(SMatrix<Type, Size>  A, SVector<Type, Size> B); // solves equation
-
-  SMatrix<Type, Size> Zamiana(unsigned int column);
-
-  SMatrix<Type, Size> Wyzeruj(unsigned int column);
-
-  Type CheckIf0() const; // function checks if it's triangular matrix
-
+  Type CheckIf0() const; // Checks if it is a triangular matrix
   Type &operator()(unsigned int row, unsigned int column);
-
-  SVector<Type,Size> WBledu(SMatrix<Type,Size> A, SVector<Type,Size> X, SVector<Type,Size> B); //liczy wektor bledu
-
   const Type &operator()(unsigned int row, unsigned int column) const;
 
+  SVector<Type, Size> ErrorVector(SMatrix<Type, Size> A, SVector<Type, Size> X, SVector<Type, Size> B); // Calculates error vector
 
-
-
-  Vector3D wypelnijRotX(Vector3D v , double theta);
+  Vector3D rotateX(Vector3D v, double theta);
 };
 
 typedef SMatrix<double, 3> Matrix3D; 
 
-
 /******************************************************************************
- |  Przeciazenie operatora <<                                                 |
- |  Argumenty:                                                                |
- |      out - strumien wejsciowy,                                             |
- |      mat - macierz.                                                        |
+ |  Overload of operator <<                                                   |
+ |  Arguments:                                                                |
+ |      out - output stream,                                                  |
+ |      mat - matrix.                                                         |
  */
 template <typename Type, int Size>
 std::ostream &operator<<(std::ostream &out, const SMatrix<Type, Size> &mat) {
   for (int i = 0; i < Size; ++i) {
     for (int j = 0; j < Size; ++j) {
-      out << "| " << mat(i, j)
-          << " | "; // warto ustalic szerokosc wyswietlania dokladnosci liczb
+      out << "| " << mat(i, j) << " | ";
     }
     std::cout << std::endl;
   }
@@ -70,10 +55,10 @@ std::ostream &operator<<(std::ostream &out, const SMatrix<Type, Size> &mat) {
 }
 
 /******************************************************************************
- |  Przeciazenie operatora >>                                                 |
- |  Argumenty:                                                                |
- |      in - strumien wyjsciowy,                                              |
- |      mat - macierz.                                                         |
+ |  Overload of operator >>                                                   |
+ |  Arguments:                                                                |
+ |      in - input stream,                                                    |
+ |      mat - matrix.                                                         |
  */
 template <typename Type, int Size>
 std::istream &operator>>(std::istream &in, SMatrix<Type, Size> &mat) {
@@ -87,51 +72,43 @@ std::istream &operator>>(std::istream &in, SMatrix<Type, Size> &mat) {
 
 template <typename Type, int Size>
 Type &SMatrix<Type, Size>::operator()(unsigned int row, unsigned int column) {
-
   if (row >= Size) {
-    std::cout << "Error: Macierz jest poza zasiegiem";
-    exit(0); // lepiej byłoby rzucić wyjątkiem stdexcept
+    std::cout << "Error: Matrix index out of range";
+    exit(0);
   }
-
   if (column >= Size) {
-    std::cout << "Error: Macierz jest poza zasiegiem";
-    exit(0); // lepiej byłoby rzucić wyjątkiem stdexcept
+    std::cout << "Error: Matrix index out of range";
+    exit(0);
   }
-
   return value[row][column];
 }
 
 /******************************************************************************
- |  Funktor macierzy                                                          |
- |  Argumenty:                                                                |
- |      row - numer wiersza.                                                  |
- |      column - numer kolumny.                                               |
- |  Zwraca:                                                                   |
- |      Wartosc macierzy w danym miejscu tablicy jako stala.                  |
+ |  Matrix functor (const)                                                    |
+ |  Arguments:                                                                |
+ |      row - row index,                                                      |
+ |      column - column index.                                                |
+ |  Returns:                                                                  |
+ |      Value of matrix at the specified position as a constant.              |
  */
 template <typename Type, int Size>
 const Type &SMatrix<Type, Size>::operator()(unsigned int row,
                                             unsigned int column) const {
-
   if (row >= Size) {
-    std::cout << "Error: Macierz jest poza zasiegiem";
-    exit(0); // lepiej byłoby rzucić wyjątkiem stdexcept
+    std::cout << "Error: Matrix index out of range";
+    exit(0);
   }
-
   if (column >= Size) {
-    std::cout << "Error: Macierz jest poza zasiegiem";
-    exit(0); // lepiej byłoby rzucić wyjątkiem stdexcept
+    std::cout << "Error: Matrix index out of range";
+    exit(0);
   }
-
   return value[row][column];
 }
 
 /******************************************************************************
- |  Konstruktor klasy Matrix.                                                 |
- |  Argumenty:                                                                |
- |      Brak argumentow.                                                      |
- |  Zwraca:                                                                   |
- |      Macierz wypelnione wartoscia 0.                                       |
+ |  Constructor of Matrix class.                                              |
+ |  Returns:                                                                  |
+ |      Matrix initialized to 0.                                              |
  */
 template <typename Type, int Size> SMatrix<Type, Size>::SMatrix() {
   for (int i = 0; i < Size; ++i) {
@@ -142,11 +119,11 @@ template <typename Type, int Size> SMatrix<Type, Size>::SMatrix() {
 }
 
 /******************************************************************************
- |  Konstruktor parametryczny klasy Matrix.                                   |
- |  Argumenty:                                                                |
- |      tmp - dwuwymiarowa tablica z elementami typu double.                  |
- |  Zwraca:                                                                   |
- |      Macierz wypelniona wartosciami podanymi w argumencie.                 |
+ |  Parameterized constructor of Matrix class.                                |
+ |  Arguments:                                                                |
+ |      tmp - two-dimensional array of elements.                              |
+ |  Returns:                                                                  |
+ |      Matrix initialized with values from the array.                        |
  */
 template <typename Type, int Size>
 SMatrix<Type, Size>::SMatrix(Type tmp[Size][Size]) {
@@ -158,16 +135,13 @@ SMatrix<Type, Size>::SMatrix(Type tmp[Size][Size]) {
 }
 
 /******************************************************************************
- |  Funkcja zwracajaca macierz transponiowana                                  |
- |  Argumenty:                                                                |
- |      tmp - dwuwymiarowa tablica z elementami typu double.                  |
- |  Zwraca:                                                                   |
- |      Macierz wypelniona wartosciami podanymi w argumencie.                 |
+ |  Transposes the matrix.                                                    |
+ |  Returns:                                                                  |
+ |      The transposed matrix.                                                |
  */
 template <typename Type, int Size>
 SMatrix<Type, Size> SMatrix<Type, Size>::Transpose() {
   SMatrix<Type, Size> result;
-
   for (int i = 0; i < Size; ++i) {
     for (int j = 0; j < Size; ++j) {
       result(i, j) = value[j][i];
@@ -177,12 +151,11 @@ SMatrix<Type, Size> SMatrix<Type, Size>::Transpose() {
 }
 
 /******************************************************************************
- |  Realizuje mnozenie macierzy przez wektor.                                 |
- |  Argumenty:                                                                |
- |       - macierz, czyli pierwszy skladnik mnozenia,                         |
- |      v - wektor, czyli drugi skladnik mnozenia.                            |
- |  Zwraca:                                                                   |
- |      Iloczyn dwoch skladnikow przekazanych jako wektor.                    |
+ |  Multiplies matrix by vector.                                              |
+ |  Arguments:                                                                |
+ |      tmp - vector.                                                         |
+ |  Returns:                                                                  |
+ |      Product of matrix and vector.                                         |
  */
 template <typename Type, int Size>
 SVector<Type, Size> SMatrix<Type, Size>::operator*(SVector<Type, Size> tmp) {
@@ -196,40 +169,29 @@ SVector<Type, Size> SMatrix<Type, Size>::operator*(SVector<Type, Size> tmp) {
 }
 
 /******************************************************************************
- |  Realizuje mnozenie macierzy przez macierz.                                |
- |  Argumenty:                                                                |
- |       - macierz, czyli pierwszy skladnik mnozenia,                         |
- |      v - wektor, czyli drugi skladnik mnozenia.                            |
- |  Zwraca:                                                                   |
- |      Iloczyn dwoch macierzy.                                               |
-*/
+ |  Multiplies matrix by matrix.                                              |
+ |  Arguments:                                                                |
+ |      tmp - second matrix.                                                  |
+ |  Returns:                                                                  |
+ |      Product of the two matrices.                                          |
+ */
 template <typename Type, int Size>
-SMatrix<Type,Size> SMatrix<Type,Size>::operator*(SMatrix<Type,Size> tmp) {
-  SMatrix<Type,Size> result;
-
-     for(int i = 0; i < Size; ++i)
-        for(int j = 0; j < Size; ++j)
-            for(int k = 0; k < Size; ++k)
-            {
-                result(i,j) += value[i][k] * tmp(k,j);
-            }
-
+SMatrix<Type, Size> SMatrix<Type, Size>::operator*(SMatrix<Type, Size> tmp) {
+  SMatrix<Type, Size> result;
+  for (int i = 0; i < Size; ++i)
+    for (int j = 0; j < Size; ++j)
+      for (int k = 0; k < Size; ++k) {
+        result(i, j) += value[i][k] * tmp(k, j);
+      }
   return result;
 }
 
-
 /******************************************************************************
- Przeciążenie dodawania macierzy |
-  |  Argumenty:
-
- |       - macierz, czyli
- pierwszy skladnik dodawania,                     |
- |      v - wektor, czyli
- drugi skladnik dodawania.                                               |
- |
- Zwraca:                                                                   |
- |
- Macierz - iloczyn dwóch podanych macierzy.                  |
+ |  Adds two matrices.                                                        |
+ |  Arguments:                                                                |
+ |      tmp - second matrix.                                                  |
+ |  Returns:                                                                  |
+ |      Sum of the two matrices.                                              |
  */
 template <typename Type, int Size>
 SMatrix<Type, Size> SMatrix<Type, Size>::operator+(SMatrix<Type, Size> tmp) {
@@ -243,71 +205,52 @@ SMatrix<Type, Size> SMatrix<Type, Size>::operator+(SMatrix<Type, Size> tmp) {
 }
 
 /******************************************************************************
-   Calculates determinant using gaussian elimination
-   Returns:
-     Value of determinant.
-
+ |  Calculates determinant using Gaussian elimination.                        |
+ |  Returns:                                                                  |
+ |      Value of the determinant.                                             |
  */
 template <typename Type, int Size> Type SMatrix<Type, Size>::Gauss() {
   Type det;
-  int parzystosc=1;
- 
+  int parity = 1;
 
   for (int i = 0; i < Size; ++i) {
     CheckIf0();
-     
     if (value[i][i] == 0) {
-      parzystosc=-parzystosc;
-      Zamiana(i);
-      Wyzeruj(i);
-
+      parity = -parity;
+      SwapColumns(i);
+      ZeroColumn(i);
     }
-    Wyzeruj(i);
-
-
-  
+    ZeroColumn(i);
   }
-
 
   det = value[0][0];
-  for (int i = 1; i < Size; ++i){
-      det = det * value[i][i];
-    
+  for (int i = 1; i < Size; ++i) {
+    det = det * value[i][i];
   }
-  det=det*parzystosc;
+  det = det * parity;
   return det;
 }
 
 /******************************************************************************
-   Changing columns
-   Arguments:
-    cloumn  -  column to change
-    vec - vector replacing that column
+ |  Replaces a column with a vector.                                          |
+ |  Arguments:                                                                |
+ |      column - index of the column to replace                               |
+ |      vec - the vector to replace it with                                   |
  */
 template <typename Type, int Size>
 SMatrix<Type, Size> SMatrix<Type, Size>::ColumnChange(int column,
                                                       SVector<Type, Size> vec) {
-  SMatrix<Type, Size> result;
-
   for (int i = 0; i < Size; ++i) {
-    for (int j = 0; j < Size; ++j) {
-      result(i, j) = value[j][i];
-    }
+    value[i][column - 1] = vec[i];
   }
-
-  for (int i = 0; i < Size; ++i) {
-
-    value[i][column-1] = vec[i];
-  }
-
   return value;
 }
 
 /******************************************************************************
-   Changing 2 rows
-   Arguments:
-    row1 -  row changed by row2
-    row2 -  row changed by row1
+ |  Swaps two rows.                                                           |
+ |  Arguments:                                                                |
+ |      row1 - first row,                                                     |
+ |      row2 - second row.                                                    |
  */
 template <typename Type, int Size>
 SMatrix<Type, Size> SMatrix<Type, Size>::RowChange(int row1, int row2) {
@@ -321,7 +264,6 @@ SMatrix<Type, Size> SMatrix<Type, Size>::RowChange(int row1, int row2) {
   }
 
   if (result(row2, 0) == 0 || result(row2, 1) == 0 || result(row2, 2) == 0) {
-
     for (int j = 0; j < Size; ++j) {
       minus = -1;
       ++changes;
@@ -333,7 +275,6 @@ SMatrix<Type, Size> SMatrix<Type, Size>::RowChange(int row1, int row2) {
     }
 
     for (int j = 0; j < Size; ++j) {
-
       result(row2, j) = minus * result(row2, j);
     }
   }
@@ -342,63 +283,51 @@ SMatrix<Type, Size> SMatrix<Type, Size>::RowChange(int row1, int row2) {
 }
 
 /******************************************************************************
-  Function solves and prints matrixes A, X, B of AX=B equation
-  and wektor bledu
-
-
-
-
+ |  Solves system of linear equations AX=B.                                   |
+ |  Arguments:                                                                |
+ |      A - coefficient matrix,                                               |
+ |      B - constant terms vector.                                            |
+ |  Returns:                                                                  |
+ |      The solutions vector X.                                               |
  */
 template <typename Type, int Size>
-SVector<Type, Size> SMatrix<Type, Size>::Equation(SMatrix<Type, Size>A, SVector<Type, Size> B) {
+SVector<Type, Size> SMatrix<Type, Size>::Equation(SMatrix<Type, Size> A, SVector<Type, Size> B) {
   SVector<Type, Size> solutions;
 
-  std::cout << "A and B of equation (AX=B) are represented by:  " << std::endl;
+  std::cout << "A and B of equation (AX=B) are represented by: " << std::endl;
   std::cout << "A: " << std::endl;
   std::cout << A << std::endl;
   std::cout << "B: " << std::endl;
   std::cout << B << std::endl;
 
-
-
-  SMatrix<Type, Size>  tmpA=A;
+  SMatrix<Type, Size> tmpA = A;
   Type W = A.Gauss();
   Type determinants[Size];
 
-
   for (int i = 1; i <= Size; ++i) {
-    A=tmpA;
-    A.ColumnChange(i,B);
+    A = tmpA;
+    A.ColumnChange(i, B);
     determinants[i - 1] = A.Gauss();
-    
     solutions[i - 1] = determinants[i - 1] / W;
   }
 
   std::cout << "Solutions: " << std::endl;
   std::cout << solutions << std::endl;
-  WBledu(tmpA,solutions,B);
-
+  ErrorVector(tmpA, solutions, B);
 
   return solutions;
 }
 
-
-
 /******************************************************************************
-  Funkcja zamienia kolumne po prawej strone, ktorej i-ty element jest niezerowy 
-  i zamienia  z i-ta kolumna, jesli i-ty element tej kolumny byl zerowy 
-  
-
-
-
+ |  Swaps a column with a non-zero element on the right if the current        |
+ |  element at position (column, column) is zero.                            |
  */
 template <typename Type, int Size>
-SMatrix<Type, Size> SMatrix<Type, Size>::Zamiana(unsigned int column) {
+SMatrix<Type, Size> SMatrix<Type, Size>::SwapColumns(unsigned int column) {
   Type tmp[Size];
 
   for (int k = column + 1; k < Size; ++k) {
     if (value[column][k] == 0) {
-
       for (int j = 0; j < Size; ++j) {
         tmp[j] = value[j][k];
         value[j][k] = value[j][column];
@@ -410,23 +339,17 @@ SMatrix<Type, Size> SMatrix<Type, Size>::Zamiana(unsigned int column) {
   return value;
 }
 
-
-
 /******************************************************************************
-  Funkcja zeruje i-ty element w prawo
-
-
-
+ |  Zeroes out elements to the right of column position during elimination.    |
  */
 template <typename Type, int Size>
-SMatrix<Type, Size> SMatrix<Type, Size>::Wyzeruj(unsigned int column) {
-  Type wariat;
+SMatrix<Type, Size> SMatrix<Type, Size>::ZeroColumn(unsigned int column) {
+  Type factor;
 
   for (int k = column + 1; k < Size; ++k) {
-    wariat = (value[column][k] / value[column][column]);
-  
+    factor = (value[column][k] / value[column][column]);
     for (int j = 0; j < Size; ++j) {
-      value[j][k] = value[j][k] - value[j][column] * wariat;
+      value[j][k] = value[j][k] - value[j][column] * factor;
     }
   }
 
@@ -434,31 +357,25 @@ SMatrix<Type, Size> SMatrix<Type, Size>::Wyzeruj(unsigned int column) {
 }
 
 /******************************************************************************
- Function checks if it's triangular matrix
-   Returns:
-    det  -  determinant if it's trangular matrix
-
+ |  Checks if the matrix is a triangular matrix.                              |
  */
 template <typename Type, int Size> Type SMatrix<Type, Size>::CheckIf0() const {
-
   int i = 0, j = 0, k = 0, result = 1;
   Type det;
-  
 
   for (i = 0; i < Size - 1; ++i) {
     for (j = Size - 1 - k; j >= 0; --j) {
       if (value[i][j] == 0) {
         result = 1;
-
       } else
         result = 0;
     }
     ++k;
   }
 
-det=value[Size][Size];
+  det = value[Size - 1][Size - 1];
   if (result == 1) {
-    for (i = Size-1; i > 0; --i) {
+    for (i = Size - 2; i >= 0; --i) {
       det *= value[i][i];
     }
   }
@@ -466,33 +383,19 @@ det=value[Size][Size];
   return det;
 }
 
-
-
-
-
 /******************************************************************************
-Liczy wektor bledu
-   Argumenty:                                                            
-       A -  macierz wspolczynnikow rownania            
-       X -  wektor nieznanych wartosci
-       B -  wektor wyrazow wolnych                      
-  Zwraca:                                                                
-      Wektor bledu
-
+ |  Calculates the error vector.                                              |
+ |  Arguments:                                                                |
+ |      A - coefficient matrix,                                               |
+ |      X - solutions vector,                                                 |
+ |      B - constant terms vector.                                            |
  */
 template <typename Type, int Size>
-SVector<Type,Size> SMatrix<Type,Size>::WBledu(SMatrix<Type,Size> A, SVector<Type,Size> X, SVector<Type,Size> B) {
- SVector<Type,Size> result;
+SVector<Type, Size> SMatrix<Type, Size>::ErrorVector(SMatrix<Type, Size> A, SVector<Type, Size> X, SVector<Type, Size> B) {
+  SVector<Type, Size> result;
+  result = (A * X) - B;
 
-result=(A*X)-B;
-
-std::cout<<"Wektor bledu: "<<std::endl;
-std::cout<<result<<std::endl;
+  std::cout << "Error vector: " << std::endl;
+  std::cout << result << std::endl;
   return result;
-
-
 }
-
-
-
-
