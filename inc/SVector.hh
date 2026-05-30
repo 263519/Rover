@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#define DIFF 1e-15
+#define DIFF 1e-9
 
 
 

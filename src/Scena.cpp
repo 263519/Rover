@@ -74,6 +74,8 @@ Scena::Scena() {
 
   if (!Inicjalizuj_PowierzchnieMarsa(Lacze))
     throw invalid_argument("Bledne dane");
+
+  WybierzLazik(1);
   Lacze.Rysuj();
 }
 

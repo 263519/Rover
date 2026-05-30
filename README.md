@@ -2,22 +2,53 @@
 ![alt text](https://github.com/263519/Rover/blob/main/wybor.png)
 
 
-## Building
+## Requirements
 
-Build by making a build directory (i.e. `build/`), run `cmake` in that dir, and then use `make` to build the desired target.
+To build and run this application, the following system dependencies are required:
 
-Requirements: cmake, gnuplot, doxygen + dot (in graphviz library)
+* **CMake** (version 3.14 or higher) - Required for project configuration and build generation.
+* **Gnuplot** - Required for 3D visual rendering of the Mars Rover and surface scene.
+* **Doxygen & Graphviz (dot)** - Optional, only required to generate HTML code documentation.
 
-Example:
-
-``` bash
-> mkdir build && cd build
-> cmake .. #### options: -DCMAKE_BUILD_TYPE=[Debug | Coverage | Release], Debug is default
-> make     #### compilation
-> ./main   #### main() from app
-> make fulltest #### compile & run tests with full decription
-> make doc       #### Generate html documentation
+You can install all necessary packages on Ubuntu/Debian by running:
+```bash
+sudo apt update && sudo apt install -y cmake gnuplot doxygen graphviz
 ```
+
+## Building & Running
+
+Follow these steps to configure, build, and run the program:
+
+1. **Create and enter the build directory:**
+   ```bash
+   mkdir build && cd build
+   ```
+
+2. **Configure the project using CMake:**
+   *(Options: `-DCMAKE_BUILD_TYPE=[Debug | Coverage | Release]`, `Debug` is default)*
+   ```bash
+   cmake ..
+   ```
+
+3. **Compile the program:**
+   ```bash
+   make
+   ```
+
+4. **Run the main application:**
+   ```bash
+   ./main
+   ```
+
+5. **Run the unit tests:**
+   ```bash
+   ./tests/unit_tests
+   ```
+
+6. **Generate HTML documentation (Optional):**
+   ```bash
+   make doc
+   ```
 
 Things to remember during upgrading project to new task:
 
