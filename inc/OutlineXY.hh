@@ -8,7 +8,7 @@ class OutlineXY {
     Vector2D TopRightCorner;
 public:
     Vector2D &set_BottomLeftCorner() { return BottomLeftCorner; }
-    Vector2D get_BottomLeftCorner() { return BottomLeftCorner; }
+    Vector2D get_BottomLeftCorner() const { return BottomLeftCorner; }
     Vector2D &set_TopRightCorner() { return TopRightCorner; }
-    Vector2D get_TopRightCorner() { return TopRightCorner; }
+    Vector2D get_TopRightCorner() const { return TopRightCorner; }
 };

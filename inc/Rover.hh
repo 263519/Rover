@@ -12,10 +12,10 @@ class Rover : public GeomObject {
     double DistanceToDrive;
 
 public:
-    double get_DistanceToDrive() { return DistanceToDrive; }
-    double &set_DistanceToDrive() { return DistanceToDrive; }
-    double get_Speed() { return Speed; }
-    double &set_Speed() { return Speed; }
+    double get_DistanceToDrive() const { return DistanceToDrive; }
+    void set_DistanceToDrive(double distance) { DistanceToDrive = distance; }
+    double get_Speed() const { return Speed; }
+    void set_Speed(double speed) { Speed = speed; }
 
     Rover();
     Rover(const char* sModelSolidFilename, const char* sObjectName, int ColorID, Vector3D Scale, Vector3D Position, double degrees, double speed, double distance);
@@ -24,5 +24,5 @@ public:
         std::cout << "Virtual Rover Destructor is running\n";
     }
 
-    virtual CollisionType CheckCollision(std::shared_ptr<Rover> &roverPtr);
+    virtual CollisionType CheckCollision(std::shared_ptr<Rover> &roverPtr) override;
 };

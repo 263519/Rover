@@ -90,14 +90,13 @@ void Scene::DriveDistance(double distance) {
   distance = abs(distance);
 
   jedz = SelectedRover->rotateZ(jedz, SelectedRover->get_OrientationAngle());
-  SelectedRover->set_DistanceToDrive() = distance;
+  SelectedRover->set_DistanceToDrive(distance);
   cout << jedz << endl;
 
   int t = abs(distance);
 
   do {
-    SelectedRover->set_Position() =
-        SelectedRover->get_Position() + jedz / distance;
+    SelectedRover->set_Position(SelectedRover->get_Position() + jedz / distance);
     SelectedRover->RecalculateAndSaveVertices();
     Link.Rysuj();
 
@@ -122,7 +121,7 @@ void Scene::Rotate(double degrees) {
   double czesc_obrotu = theta / t;
 
   do {
-    SelectedRover->set_OrientationAngle() += czesc_obrotu;
+    SelectedRover->set_OrientationAngle(SelectedRover->get_OrientationAngle() + czesc_obrotu);
     SelectedRover->RecalculateAndSaveVertices();
     Link.Rysuj();
 
@@ -164,34 +163,34 @@ list<shared_ptr<GeomObject>>::iterator Scene::PickUpSample() {
   }
   else {
     auto it = GeomObjects.begin();
- 
-    for (shared_ptr<GeomObject> &Ob : GeomObjects) {
-      if ((*it)->GetObjectName() != "../model_solids/cube3.dat") {
-        cout << "Collision Type: " << (*it)->CheckCollision(SelectedRover) << "\n";
-        if ((*it)->CheckCollision(SelectedRover)) {
-          if ((*it)->CheckCollision(SelectedRover) == DriveOverSample || (*it)->CheckCollision(SelectedRover) == CollisionWithSample) {
-            shared_ptr<RoverSFR> roverSFR;
-            roverSFR = dynamic_pointer_cast<RoverSFR>(SelectedRover);
-            roverSFR->AddSample((*it));
-            (*it)->set_Position() = Wysoko;
-            (*it)->RecalculateAndSaveVertices();
-            deleted_items += ' ' + (*it)->GetObjectName();
-            Link.Rysuj();
-      
-            if ((*it)->GetObjectName() != "../model_solids/cube3.dat") {
-              it = GeomObjects.erase(it);
-            }
-           
-            RemoveFromDrawingList(Link, *Ob);
-            return it;
+    while (it != GeomObjects.end()) {
+      shared_ptr<GeomObject> ob = *it;
+      if (ob->GetObjectName() != "../model_solids/cube3.dat") {
+        CollisionType colType = ob->CheckCollision(SelectedRover);
+        cout << "Collision Type: " << colType << "\n";
+        if (colType == DriveOverSample || colType == CollisionWithSample) {
+          shared_ptr<RoverSFR> roverSFR = dynamic_pointer_cast<RoverSFR>(SelectedRover);
+          if (roverSFR) {
+            roverSFR->AddSample(ob);
           }
+          ob->set_Position(Wysoko);
+          ob->RecalculateAndSaveVertices();
+          deleted_items += ' ' + ob->GetObjectName();
+          Link.Rysuj();
+          
+          RemoveFromDrawingList(Link, *ob);
+          
+          it = GeomObjects.erase(it);
+          return it;
         }
       }
       ++it;
     }
   }
   auto it = GeomObjects.begin();
-  it++;
+  if (it != GeomObjects.end()) {
+    it++;
+  }
   return it;
 }
 

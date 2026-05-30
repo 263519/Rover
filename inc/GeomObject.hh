@@ -22,22 +22,25 @@ class GeomObject {
     OutlineXY     _outline;
     
   public:
-    OutlineXY &set_Outline() { return _outline; }
-    OutlineXY get_Outline() { return _outline; }
-    double get_OrientationAngle() { return _orientationAngle; }
-    double &set_OrientationAngle() { return _orientationAngle; }
-    Vector3D &set_Position() { return _position; }
-    Vector3D get_Position() { return _position; }
-    
-    Vector3D &set_Scale() { return _scale; }
-    Vector3D get_Scale() { return _scale; }
-    
-    std::string  get_ObjectName() { return _objectName; }
-    std::string  get_DrawnSolidFilename() { return _drawnSolidFilename; }
-    std::string  get_ModelSolidFilename() { return _modelSolidFilename; }
-    std::string  &set_ObjectName() { return _objectName; }
-    std::string  &set_DrawnSolidFilename() { return _drawnSolidFilename; }
-    std::string  &set_ModelSolidFilename() { return _modelSolidFilename; }
+    const OutlineXY &get_Outline() const { return _outline; }
+    void set_Outline(const OutlineXY &outline) { _outline = outline; }
+
+    double get_OrientationAngle() const { return _orientationAngle; }
+    void set_OrientationAngle(double angle) { _orientationAngle = angle; }
+
+    const Vector3D &get_Position() const { return _position; }
+    void set_Position(const Vector3D &pos) { _position = pos; }
+
+    const Vector3D &get_Scale() const { return _scale; }
+    void set_Scale(const Vector3D &scale) { _scale = scale; }
+
+    const std::string &get_ObjectName() const { return _objectName; }
+    const std::string &get_DrawnSolidFilename() const { return _drawnSolidFilename; }
+    const std::string &get_ModelSolidFilename() const { return _modelSolidFilename; }
+
+    void set_ObjectName(const std::string &name) { _objectName = name; }
+    void set_DrawnSolidFilename(const std::string &filename) { _drawnSolidFilename = filename; }
+    void set_ModelSolidFilename(const std::string &filename) { _modelSolidFilename = filename; }
   
     void SaveVertices();
     bool Input();
@@ -48,9 +51,7 @@ class GeomObject {
     }
 
     int GetColorID() const { return _colorID; }
-  
     const std::string & GetObjectName() const { return _objectName; }
-  
     const std::string & GetDrawnSolidFilename() const { return _drawnSolidFilename; }
 
     bool RecalculateAndSaveVertices();

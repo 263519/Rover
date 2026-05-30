@@ -18,12 +18,12 @@ class SVector {
 
     SVector<Type,Size> operator - (const SVector<Type,Size> &subtrahend) const;
     SVector<Type,Size> operator * (double multiplier) const;
-    SVector<Type,Size> operator + (const SVector<Type,Size> &v);
-    SVector<Type,Size> operator / (const double &tmp);
+    SVector<Type,Size> operator + (const SVector<Type,Size> &v) const;
+    SVector<Type,Size> operator / (const double &tmp) const;
     bool operator == (const  SVector<Type,Size> tmp) const;
     SVector<Type,Size> operator * (SVector<Type,Size> Vector2) const; // Cross product
-    Type return_x() { return size[0]; }
-    Type return_y() { return size[1]; }
+    Type return_x() const { return size[0]; }
+    Type return_y() const { return size[1]; }
 };
 
 typedef SVector<double, 3> Vector3D; 
@@ -125,7 +125,7 @@ bool SVector<Type,Size>::operator == (const  SVector<Type,Size> tmp) const {
  |      Sum of the two vectors.                                               |
  */
 template <typename Type, int Size>
-SVector<Type,Size> SVector<Type,Size>::operator + (const SVector<Type,Size> &v) {
+SVector<Type,Size> SVector<Type,Size>::operator + (const SVector<Type,Size> &v) const {
   SVector<Type,Size> result;
   for (int i = 0; i < Size; ++i) {
     result[i] = size[i] + v[i];
@@ -142,7 +142,7 @@ SVector<Type,Size> SVector<Type,Size>::operator + (const SVector<Type,Size> &v) 
  |      The quotient of vector divided by scalar.                             |
  */
 template <typename Type, int Size>
-SVector<Type,Size> SVector<Type,Size>::operator / (const double &tmp) {
+SVector<Type,Size> SVector<Type,Size>::operator / (const double &tmp) const {
   SVector<Type,Size> result;
   for (int i = 0; i < Size; ++i) {
     result[i] = size[i] / tmp;
