@@ -1,6 +1,8 @@
 #pragma once
 #include <cmath>
 #include <iostream>
+#include <initializer_list>
+#include <stdexcept>
 #include "SVector.hh"
 
 template <typename Type, int Size> class SMatrix {
@@ -10,6 +12,31 @@ private:
 public:
   SMatrix();
   SMatrix(Type[Size][Size]); // Class constructor
+  
+  SMatrix(std::initializer_list<std::initializer_list<Type>> list) {
+      if (list.size() > Size) {
+          throw std::out_of_range("Initializer list size exceeds SMatrix row bounds");
+      }
+      size_t i = 0;
+      for (const auto& row : list) {
+          if (row.size() > Size) {
+              throw std::out_of_range("Initializer list size exceeds SMatrix column bounds");
+          }
+          size_t j = 0;
+          for (const auto& elem : row) {
+              value[i][j++] = elem;
+          }
+          for (; j < Size; ++j) {
+              value[i][j] = Type{};
+          }
+          ++i;
+      }
+      for (; i < Size; ++i) {
+          for (size_t j = 0; j < Size; ++j) {
+              value[i][j] = Type{};
+          }
+      }
+  }
 
   SVector<Type, Size> operator*(SVector<Type, Size> tmp); // Operator for multiplication by vector
   SMatrix<Type, Size> operator*(SMatrix<Type, Size> tmp); // Operator for multiplication by matrix

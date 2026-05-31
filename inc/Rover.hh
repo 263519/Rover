@@ -24,5 +24,7 @@ public:
         std::cout << "Virtual Rover Destructor is running\n";
     }
 
+    CollisionType AnalyzeSampleCollision(const GeomObject &sample);
+
     virtual CollisionType CheckCollision(std::shared_ptr<Rover> &roverPtr) override;
 };

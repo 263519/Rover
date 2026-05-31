@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <initializer_list>
+#include <stdexcept>
+
 #define DIFF 0.01
 
 template <typename Type, int Size>
@@ -13,6 +16,19 @@ class SVector {
     SVector() { for (Type &Wsp: size) Wsp = 0; }
     SVector(Type [Size]);
     
+    SVector(std::initializer_list<Type> list) {
+        if (list.size() > Size) {
+            throw std::out_of_range("Initializer list size exceeds SVector bounds");
+        }
+        size_t i = 0;
+        for (const auto& elem : list) {
+            size[i++] = elem;
+        }
+        for (; i < Size; ++i) {
+            size[i] = Type{};
+        }
+    }
+
     Type  operator [] (unsigned int Ind) const { return size[Ind]; }
     Type &operator [] (unsigned int Ind)       { return size[Ind]; }
 

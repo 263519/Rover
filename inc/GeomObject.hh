@@ -58,6 +58,8 @@ class GeomObject {
 
     Vector3D rotateZ(Vector3D v, double theta);
 
+    bool CheckOutlineCollision(const GeomObject &other) const;
+
     virtual CollisionType CheckCollision(std::shared_ptr<Rover> &roverPtr) = 0;
 };
 

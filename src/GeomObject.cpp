@@ -124,3 +124,14 @@ void GeomObject::SaveVertices() {
     this->_outline.set_TopRightCorner()[1] = tmp;
   }
 }
+
+/*
+ * Checks if the axis-aligned bounding box (AABB) of this object overlaps
+ * with the bounding box of another object.
+ */
+bool GeomObject::CheckOutlineCollision(const GeomObject &other) const {
+  return (this->get_Outline().get_BottomLeftCorner()[0] <= other.get_Outline().get_TopRightCorner()[0] &&
+          this->get_Outline().get_TopRightCorner()[0] >= other.get_Outline().get_BottomLeftCorner()[0] &&
+          this->get_Outline().get_BottomLeftCorner()[1] <= other.get_Outline().get_TopRightCorner()[1] &&
+          this->get_Outline().get_TopRightCorner()[1] >= other.get_Outline().get_BottomLeftCorner()[1]);
+}

@@ -11,31 +11,9 @@ RoverSFR::RoverSFR(const char *sModelSolidFilename,
             Position, degrees, speed, distance) {}
 
 CollisionType RoverSFR::CheckCollision(shared_ptr<Rover> &Akt) {
-  if (Akt->get_Outline().get_BottomLeftCorner()[0] <= this->get_Outline().get_BottomLeftCorner()[0] &&
-      ((Akt->get_Outline().get_BottomLeftCorner()[1] >= this->get_Outline().get_BottomLeftCorner()[1] &&
-        Akt->get_Outline().get_BottomLeftCorner()[1] <= this->get_Outline().get_TopRightCorner()[1]) ||
-       (Akt->get_Outline().get_TopRightCorner()[1] <= this->get_Outline().get_TopRightCorner()[1] &&
-        Akt->get_Outline().get_TopRightCorner()[1] >= this->get_Outline().get_BottomLeftCorner()[1]) ||
-       (Akt->get_Outline().get_TopRightCorner()[1] >= this->get_Outline().get_TopRightCorner()[1] &&
-        Akt->get_Outline().get_BottomLeftCorner()[1] <= this->get_Outline().get_BottomLeftCorner()[1]))) {
-
-    if (Akt->get_Outline().get_TopRightCorner()[0] >= this->get_Outline().get_BottomLeftCorner()[0]) {
-      cout << "Collision!" << endl;
-      return Collision;
-    }
-
-  } else if (Akt->get_Outline().get_BottomLeftCorner()[0] >= this->get_Outline().get_BottomLeftCorner()[0] &&
-             ((Akt->get_Outline().get_BottomLeftCorner()[1] >= this->get_Outline().get_BottomLeftCorner()[1] &&
-               Akt->get_Outline().get_BottomLeftCorner()[1] <= this->get_Outline().get_TopRightCorner()[1]) ||
-              (Akt->get_Outline().get_TopRightCorner()[1] <= this->get_Outline().get_TopRightCorner()[1] &&
-               Akt->get_Outline().get_TopRightCorner()[1] >= this->get_Outline().get_BottomLeftCorner()[1]) ||
-              (Akt->get_Outline().get_BottomLeftCorner()[1] <= this->get_Outline().get_BottomLeftCorner()[1] &&
-               Akt->get_Outline().get_TopRightCorner()[1] >= this->get_Outline().get_TopRightCorner()[1]))) {
-
-    if (Akt->get_Outline().get_BottomLeftCorner()[0] <= this->get_Outline().get_TopRightCorner()[0]) {
-      cout << "Collision!" << endl;
-      return Collision;
-    }
+  if (this->CheckOutlineCollision(*Akt)) {
+    cout << "Collision!" << endl;
+    return Collision;
   }
   return NoCollision;
 }
