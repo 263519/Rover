@@ -19,9 +19,9 @@ Rover::Rover(const char* sModelSolidFilename,
 CollisionType Rover::CheckCollision(shared_ptr<Rover> &Akt) {
   if (this->CheckOutlineCollision(*Akt)) {
     cout << "Collision!" << endl;
-    return Collision;
+    return CollisionType::Collision;
   }
-  return NoCollision;
+  return CollisionType::NoCollision;
 }
 
 /*
@@ -29,7 +29,7 @@ CollisionType Rover::CheckCollision(shared_ptr<Rover> &Akt) {
  * results in a solid collision, based on the chassis clearance and the distance to the sample.
  */
 CollisionType Rover::AnalyzeSampleCollision(const GeomObject &sample) {
-  CollisionType typ = DriveOverSample;
+  CollisionType typ = CollisionType::DriveOverSample;
 
   double tmp[3] = {this->get_DistanceToDrive(), 0, 0};
   Vector3D jedz(tmp);
@@ -51,14 +51,14 @@ CollisionType Rover::AnalyzeSampleCollision(const GeomObject &sample) {
   double distance = abs(sin_a * dlugosc_r);
 
   if (distance > (this->get_Scale()[1] / 5)) {
-    typ = CollisionWithSample;
+    typ = CollisionType::CollisionWithSample;
   }
 
-  if (typ == DriveOverSample) {
+  if (typ == CollisionType::DriveOverSample) {
     cout << "Collision with sample, but you can drive over it. Distance: " << distance << endl;
   }
 
-  if (typ == CollisionWithSample) {
+  if (typ == CollisionType::CollisionWithSample) {
     cout << "Collision with sample! Distance: " << distance << endl;
   }
 

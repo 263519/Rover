@@ -102,7 +102,7 @@ void Scene::DriveDistance(double distance) {
 
     for (shared_ptr<GeomObject> &Ob : temp_list) {
       if (SelectedRover->GetObjectName() != Ob->GetObjectName()) {
-        if (Ob->CheckCollision(SelectedRover)) {
+        if (Ob->CheckCollision(SelectedRover) != CollisionType::NoCollision) {
           cout << "Collision occurred during drive!" << endl;
           cout << "Press ENTER to allow SFR to shift." << endl;
           t = 1;
@@ -127,8 +127,9 @@ void Scene::Rotate(double degrees) {
 
     for (shared_ptr<GeomObject> &Ob : GeomObjects) {
       if (SelectedRover->GetObjectName() != Ob->GetObjectName()) {
-        if (Ob->CheckCollision(SelectedRover)) {
-          if (Ob->CheckCollision(SelectedRover) == 1) {
+        CollisionType col = Ob->CheckCollision(SelectedRover);
+        if (col != CollisionType::NoCollision) {
+          if (col == CollisionType::DriveOverSample) {
             cout << "Collision occurred during rotation!" << endl;
           }
           cout << "Press ENTER to allow SFR to shift." << endl;
@@ -168,7 +169,7 @@ list<shared_ptr<GeomObject>>::iterator Scene::PickUpSample() {
       if (ob->GetObjectName() != "../model_solids/cube3.dat") {
         CollisionType colType = ob->CheckCollision(SelectedRover);
         cout << "Collision Type: " << colType << "\n";
-        if (colType == DriveOverSample || colType == CollisionWithSample) {
+        if (colType == CollisionType::DriveOverSample || colType == CollisionType::CollisionWithSample) {
           shared_ptr<RoverSFR> roverSFR = dynamic_pointer_cast<RoverSFR>(SelectedRover);
           if (roverSFR) {
             roverSFR->AddSample(ob);

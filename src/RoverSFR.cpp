@@ -13,9 +13,9 @@ RoverSFR::RoverSFR(const char *sModelSolidFilename,
 CollisionType RoverSFR::CheckCollision(shared_ptr<Rover> &Akt) {
   if (this->CheckOutlineCollision(*Akt)) {
     cout << "Collision!" << endl;
-    return Collision;
+    return CollisionType::Collision;
   }
-  return NoCollision;
+  return CollisionType::NoCollision;
 }
 
 void RoverSFR::AddSample(shared_ptr<GeomObject> &samplePtr) {

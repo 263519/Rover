@@ -4,7 +4,7 @@ using namespace std;
 CollisionType RegolithSample::CheckCollision(shared_ptr<Rover> &Akt) {
   // Delegate basic bounding box check to base GeomObject (DRY)
   if (!this->CheckOutlineCollision(*Akt)) {
-    return NoCollision;
+    return CollisionType::NoCollision;
   }
 
   // Delegate the details of chassis clearance and distance calculation to Rover (SRP)
