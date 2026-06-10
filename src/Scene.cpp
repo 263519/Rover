@@ -1,5 +1,6 @@
 #include "Scene.hh"
 #include <iostream>
+#include <limits>
 using namespace std;
 string deleted_items;
 
@@ -27,21 +28,16 @@ void Scene::RemoveFromDrawingList(PzG::GnuplotLink &rLink,
 }
 
 Scene::Scene() {
-  double skala[3] = {20, 20, 10};
-  Vector3D Scale(skala);
-
-  double polozenie1[3] = {-100, 0, 0};
-  double polozenie2[3] = {0, 100, 0};
-
-  Vector3D Polozenie1(polozenie1);
-  Vector3D Polozenie2(polozenie2);
+  Vector3D Scale{20, 20, 10};
+  Vector3D Position1{-100, 0, 0};
+  Vector3D Position2{0, 100, 0};
 
   GeomObjects.push_back(make_shared<RoverSFR>("../model_solids/cube3.dat",
-                                              "FSRxpp", Color_LightBlue,
-                                              Scale, Polozenie1, 0, 20, 33));
+                                              "FSRxpp", static_cast<int>(Colors::LightBlue),
+                                              Scale, Position1, 0, 20, 33));
   GeomObjects.push_back(make_shared<RoverSFR>("../model_solids/cube3.dat",
-                                           "FSR", Color_LightBlue,
-                                           Scale, Polozenie2, 0, 10, 15));
+                                           "FSR", static_cast<int>(Colors::LightBlue),
+                                           Scale, Position2, 0, 10, 15));
 
   PlaceSamples();
 
@@ -68,39 +64,35 @@ shared_ptr<Rover> Scene::SelectRover(unsigned int choice) {
     AddToDrawingList(Link, *Ob);
     Ob->RecalculateAndSaveVertices();
 
-    this->SelectedRover = dynamic_pointer_cast<Rover>(Ob);
-
     if (i == choice) {
-      if (Ob->get_ObjectName().find("FSR", 0) >= 3) {
-        this->SelectedRover = dynamic_pointer_cast<RoverSFR>(Ob);
-        return dynamic_pointer_cast<RoverSFR>(Ob);
+      if (auto rover = dynamic_pointer_cast<Rover>(Ob)) {
+        this->SelectedRover = rover;
+        return rover;
       }
-      return dynamic_pointer_cast<Rover>(Ob);
     }
   }
-  cout << "Rover number out of range. Selected RoverSFR by default." << endl;
+  cout << "Rover number out of range. Defaulting to nullptr." << endl;
   return nullptr;
 }
 
 void Scene::DriveDistance(double distance) {
-  list<shared_ptr<GeomObject>> temp_list = GeomObjects;
+  list<shared_ptr<GeomObject>> tempList = GeomObjects;
 
-  double tmp[3] = {distance, 0, 0};
-  Vector3D jedz(tmp);
+  Vector3D driveVector{distance, 0, 0};
   distance = abs(distance);
 
-  jedz = SelectedRover->rotateZ(jedz, SelectedRover->get_OrientationAngle());
+  driveVector = SelectedRover->rotateZ(driveVector, SelectedRover->get_OrientationAngle());
   SelectedRover->set_DistanceToDrive(distance);
-  cout << jedz << endl;
+  cout << driveVector << endl;
 
   int t = abs(distance);
 
   do {
-    SelectedRover->set_Position(SelectedRover->get_Position() + jedz / distance);
+    SelectedRover->set_Position(SelectedRover->get_Position() + driveVector / distance);
     SelectedRover->RecalculateAndSaveVertices();
     Link.Rysuj();
 
-    for (shared_ptr<GeomObject> &Ob : temp_list) {
+    for (shared_ptr<GeomObject> &Ob : tempList) {
       if (SelectedRover->GetObjectName() != Ob->GetObjectName()) {
         if (Ob->CheckCollision(SelectedRover) != CollisionType::NoCollision) {
           cout << "Collision occurred during drive!" << endl;
@@ -156,10 +148,9 @@ void Scene::DisplaySampleList() {
 }
 
 list<shared_ptr<GeomObject>>::iterator Scene::PickUpSample() {
-  double wysoko[3] = {999, 999, 999};
-  Vector3D Wysoko(wysoko);
+  Vector3D highAltitude{999, 999, 999};
 
-  if (SelectedRover->get_ObjectName().find("FSR", 0) >= 3) {
+  if (!SelectedRover || !SelectedRover->CanPickSamples()) {
     cout << "Option only available for RoverSFR!" << endl;
   }
   else {
@@ -170,11 +161,8 @@ list<shared_ptr<GeomObject>>::iterator Scene::PickUpSample() {
         CollisionType colType = ob->CheckCollision(SelectedRover);
         cout << "Collision Type: " << colType << "\n";
         if (colType == CollisionType::DriveOverSample || colType == CollisionType::CollisionWithSample) {
-          shared_ptr<RoverSFR> roverSFR = dynamic_pointer_cast<RoverSFR>(SelectedRover);
-          if (roverSFR) {
-            roverSFR->AddSample(ob);
-          }
-          ob->set_Position(Wysoko);
+          SelectedRover->AddSample(ob);
+          ob->set_Position(highAltitude);
           ob->RecalculateAndSaveVertices();
           deleted_items += ' ' + ob->GetObjectName();
           Link.Rysuj();
@@ -200,18 +188,16 @@ void Scene::PlaceSamples() {
   AdjacencyListGraph<std::pair<int,int>> l;
 
   for (int i = 0; i < 15; i++) {
-    double skala[3] = {20, 20, 10};
-    Vector3D Scale(skala);
+    Vector3D scale{20, 20, 10};
 
     double x = rand() % 200;
     double y = rand() % 200;
-    double polozenie[3] = {x - 100, y - 100, 0};
-    Vector3D Position(polozenie);
+    Vector3D position{x - 100, y - 100, 0};
     l.insertEdge(l.insertVertex({x, y}), l.insertVertex({0, 0}), 10);
       
     GeomObjects.push_back(
         make_shared<RegolithSample>("../model_solids/cube2.dat", names[i],
-                                    Color_Red, Scale * 0.2, Position, 0));
+                                    static_cast<int>(Colors::Red), scale * 0.2, position, 0));
   }
 
   l.print();
@@ -261,54 +247,80 @@ void Scene::AutonomousDrive() {
   cout << "Autonomous drive complete.\n";
 }
 
-void Scene::Menu() {
-  int t = 1, wybor;
-  char znak;
-  double odleglosc, kat;
-
-  while (t) {
-    cout << "--------------------------------------" << endl;
-    cout << "a - autonomous drive \nj - drive straight \no - change orientation \np - pick up sample (RoverSFR only)\nw - select rover \nl - list samples on scene \nm - display menu\n\nk - exit program \n--------------------------------------\nYour choice: ";
-
-    cin >> znak;
-    switch (znak) {
-    case 'a':
-      cout << "Autonomous driving" << endl;
-      AutonomousDrive();
-      break;
-    case 'j':
-      cout << "Enter distance to drive: " << endl;
-      cin >> odleglosc;
-      DriveDistance(odleglosc);
-      break;
-    case 'o':
-      cout << "Enter angle to rotate: " << endl;
-      cin >> kat;
-      Rotate(kat);
-      break;
-    case 'p':
-      PickUpSample();
-      cout << endl;
-      break;
-    case 'w':
-      cout << "Enter rover index to select: " << endl;
-      cin >> wybor;
-      SelectRover(wybor);
-      break;
-    case 'l':
-      DisplaySampleList();
-      break;
-    case 'm':
-      t = 0;
-      break;
-    case 'k':
-      t = 0;
-      break;
-    default:
-      cout << "Please select a valid option." << endl;
-      break;
+template <typename T>
+static T PromptInput(const string& prompt) {
+  T value;
+  while (true) {
+    cout << prompt;
+    if (cin >> value) {
+      return value;
     }
+    cout << "Invalid input! Please try again.\n";
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
   }
+}
 
-  cout << deleted_items << " Deleted items\n";
+static void PrintMenu() {
+  cout << R"(--------------------------------------
+a - autonomous drive 
+j - drive straight 
+o - change orientation 
+p - pick up sample (RoverSFR only)
+w - select rover 
+l - list samples on scene 
+m - display menu
+
+k - exit program 
+--------------------------------------)" << endl;
+}
+
+void Scene::Menu() {
+  PrintMenu();
+
+  while (true) {
+    char choice = PromptInput<char>("Your choice (m for menu): ");
+
+    switch (choice) {
+      case 'a': {
+        cout << "Autonomous driving" << endl;
+        AutonomousDrive();
+        break;
+      }
+      case 'j': {
+        DriveDistance(PromptInput<double>("Enter distance to drive: "));
+        break;
+      }
+      case 'o': {
+        Rotate(PromptInput<double>("Enter angle to rotate: "));
+        break;
+      }
+      case 'p': {
+        PickUpSample();
+        cout << endl;
+        break;
+      }
+      case 'w': {
+        SelectRover(PromptInput<unsigned int>("Enter rover index to select: "));
+        break;
+      }
+      case 'l': {
+        DisplaySampleList();
+        break;
+      }
+      case 'm': {
+        PrintMenu();
+        break;
+      }
+      case 'k': {
+        cout << deleted_items << " Deleted items\n";
+        return;
+      }
+      default: {
+        cout << "Please select a valid option." << endl;
+        break;
+      }
+    }
+    cout << endl;
+  }
 }

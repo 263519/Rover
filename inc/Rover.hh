@@ -17,6 +17,9 @@ public:
     double get_Speed() const { return Speed; }
     void set_Speed(double speed) { Speed = speed; }
 
+    virtual bool CanPickSamples() const { return false; }
+    virtual void AddSample(std::shared_ptr<GeomObject>&) {}
+
     Rover();
     Rover(const char* sModelSolidFilename, const char* sObjectName, int ColorID, Vector3D Scale, Vector3D Position, double degrees, double speed, double distance);
 
